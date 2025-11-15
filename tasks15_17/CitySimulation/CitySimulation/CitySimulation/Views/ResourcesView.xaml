@@ -1,0 +1,168 @@
+﻿<UserControl x:Class="CitySimulation.Views.ResourcesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#F8F9FA">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Основная информация -->
+        <StackPanel Grid.Column="0" Margin="0,0,20,0">
+            <TextBlock Text="🏭 Система добычи природных ресурсов" 
+                      FontSize="24" FontWeight="Bold" Foreground="#2B2D42" 
+                      Margin="0,0,0,20"/>
+
+            <!-- Статус -->
+            <Border Background="#6A9FB5" Padding="15" CornerRadius="8" Margin="0,0,0,15">
+                <TextBlock x:Name="StatusText" Text="Готов к работе" 
+                          Foreground="White" FontSize="14" FontWeight="SemiBold"
+                          TextWrapping="Wrap"/>
+            </Border>
+
+            <!-- Список объектов добычи -->
+            <TextBlock Text="Объекты добычи:" FontSize="16" FontWeight="Bold" 
+                      Foreground="#2B2D42" Margin="0,0,0,10"/>
+
+            <ListView x:Name="FacilitiesList" 
+                     Background="White" BorderThickness="1" BorderBrush="#DEE2E6"
+                     Height="150" SelectionChanged="FacilitiesList_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Тип" Width="100" DisplayMemberBinding="{Binding TypeRussian}"/>
+                        <GridViewColumn Header="Добыча/день" Width="100" DisplayMemberBinding="{Binding DailyProduction}"/>
+                        <GridViewColumn Header="Работники" Width="80" DisplayMemberBinding="{Binding Workers}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <!-- Добавление нового объекта -->
+            <GroupBox Header="➕ Добавить новый объект добычи" Margin="0,10,0,0"
+                     BorderBrush="#DEE2E6" Background="White" Foreground="#2B2D42">
+                <StackPanel Margin="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                            <TextBlock Text="Название:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <TextBox x:Name="NewFacilityName" Text="Новый объект" 
+                                    Background="White" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="0,0,10,0">
+                            <TextBlock Text="Тип ресурса:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                            <ComboBox x:Name="ResourceTypeComboBox" 
+                                     Background="White" BorderBrush="#DEE2E6" BorderThickness="1"/>
+                        </StackPanel>
+
+                        <Button Grid.Column="2" Content="➕ Добавить" Click="AddNewFacility_Click"
+                                Background="#6A9FB5" Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0" Padding="15,8" VerticalAlignment="Bottom"
+                                Margin="0,0,0,5"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Управление выбранным объектом -->
+            <GroupBox Header="Управление объектом добычи" Margin="0,15,0,0"
+                     BorderBrush="#DEE2E6" Background="White" Foreground="#2B2D42">
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="SelectedFacilityName" Text="Выберите объект" 
+                              FontWeight="Bold" FontSize="14" 
+                              Foreground="#2B2D42" Margin="0,0,0,10"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="⏵ Начать добычу" Click="StartExtraction_Click"
+                                Grid.Column="0" Margin="5" Background="#6A9FB5" 
+                                Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0"/>
+                        <Button Content="⏸ Остановить" Click="StopExtraction_Click"
+                                Grid.Column="1" Margin="5" Background="#95A5A6" 
+                                Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0"/>
+                        <Button Content="👨‍💼 + Работник" Click="HireWorker_Click"
+                                Grid.Column="2" Margin="5" Background="#6A9FB5" 
+                                Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0"/>
+                        <Button Content="👨‍💼 - Работник" Click="FireWorker_Click"
+                                Grid.Column="3" Margin="5" Background="#95A5A6" 
+                                Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0"/>
+                        <Button Content="🗑️ Удалить" Click="DeleteFacility_Click"
+                                Grid.Column="4" Margin="5" Background="#E74C3C" 
+                                Foreground="White" FontWeight="SemiBold"
+                                BorderThickness="0"/>
+                    </Grid>
+
+                    <Button Content="📦 Собрать ресурсы" Click="CollectResources_Click"
+                            Margin="5,10,5,5" Background="#7E8AA2" 
+                            Foreground="White" FontWeight="Bold" FontSize="12"
+                            Height="35" BorderThickness="0"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <!-- Боковая панель -->
+        <StackPanel Grid.Column="1">
+            <!-- Хранилище -->
+            <GroupBox Header="📦 Хранилище ресурсов" Margin="0,0,0,15"
+                     BorderBrush="#DEE2E6" Background="White" Foreground="#2B2D42">
+                <StackPanel Margin="10">
+                    <TextBlock x:Name="StorageCapacity" Text="Вместимость: 100000" 
+                              FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#495057"/>
+                    <TextBlock x:Name="StorageUsed" Text="Занято: 0" 
+                              Foreground="#6A9FB5" Margin="0,0,0,10" FontWeight="SemiBold"/>
+
+                    <ListView x:Name="StorageList" Height="120" BorderThickness="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Ресурс" Width="100" DisplayMemberBinding="{Binding KeyRussian}"/>
+                                <GridViewColumn Header="Количество" Width="80" DisplayMemberBinding="{Binding Value}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Месторождения -->
+            <GroupBox Header="⛰️ Месторождения" BorderBrush="#DEE2E6" Background="White" Foreground="#2B2D42">
+                <StackPanel Margin="10">
+                    <ListView x:Name="DepositsList" Height="200" BorderThickness="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Название" Width="120" DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="Тип" Width="80" DisplayMemberBinding="{Binding TypeRussian}"/>
+                                <GridViewColumn Header="Запасы" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock>
+                                                <Run Text="{Binding CurrentAmount, StringFormat={}{0:F0}}"/>
+                                                <Run Text="/"/>
+                                                <Run Text="{Binding Capacity, StringFormat={}{0:F0}}"/>
+                                            </TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

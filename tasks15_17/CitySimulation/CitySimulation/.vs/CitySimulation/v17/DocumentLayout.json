@@ -1,0 +1,413 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\utilities\\utilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\utilities\\utilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\views\\utilitiesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\views\\utilitiesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|c:\\users\\la692\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\citysimulation\\citysimulation\\views\\utilitiesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\views\\utilitiesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\views\\resourcesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\views\\resourcesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\views\\resourcesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\views\\resourcesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\resources\\extractionfacility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\resources\\extractionfacility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\utilities\\residentialbuilding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\utilities\\residentialbuilding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\resources\\resourcestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\resources\\resourcestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\resources\\resourcedeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\resources\\resourcedeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\resources\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\resources\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\utilities\\utilitynetwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\utilities\\utilitynetwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\views\\converters\\booleantocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\views\\converters\\booleantocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\viewmodels\\utilitiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\viewmodels\\utilitiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\viewmodels\\resourcesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\viewmodels\\resourcesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\utilities\\utilitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\utilities\\utilitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\utilities\\utilityconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\utilities\\utilityconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\citysimulation\\models\\resources\\resourcemarket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBB9C8B9-6504-4110-879F-5AB87667B736}|CitySimulation\\CitySimulation.csproj|solutionrelative:citysimulation\\models\\resources\\resourcemarket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 381,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\App.xaml.cs",
+              "RelativeToolTip": "CitySimulation\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:40:15.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\App.xaml",
+              "RelativeDocumentMoniker": "CitySimulation\\App.xaml",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\App.xaml",
+              "RelativeToolTip": "CitySimulation\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T22:40:02.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UtilitiesView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\UtilitiesView.xaml.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Views\\UtilitiesView.xaml.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\UtilitiesView.xaml.cs",
+              "RelativeToolTip": "CitySimulation\\Views\\UtilitiesView.xaml.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAuwKkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:39:49.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResourcesView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\ResourcesView.xaml.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Views\\ResourcesView.xaml.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\ResourcesView.xaml.cs",
+              "RelativeToolTip": "CitySimulation\\Views\\ResourcesView.xaml.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAuwNIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:39:01.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\RelayCommand.cs",
+              "RelativeToolTip": "CitySimulation\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:31:45.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UtilitiesView.xaml",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\UtilitiesView.xaml",
+              "RelativeDocumentMoniker": "CitySimulation\\Views\\UtilitiesView.xaml",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\UtilitiesView.xaml",
+              "RelativeToolTip": "CitySimulation\\Views\\UtilitiesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T22:31:17.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResourcesView.xaml",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\ResourcesView.xaml",
+              "RelativeDocumentMoniker": "CitySimulation\\Views\\ResourcesView.xaml",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\ResourcesView.xaml",
+              "RelativeToolTip": "CitySimulation\\Views\\ResourcesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T22:30:35.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BooleanToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\Converters\\BooleanToColorConverter.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Views\\Converters\\BooleanToColorConverter.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Views\\Converters\\BooleanToColorConverter.cs",
+              "RelativeToolTip": "CitySimulation\\Views\\Converters\\BooleanToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:30:07.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UtilitiesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\UtilitiesViewModel.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\ViewModels\\UtilitiesViewModel.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\UtilitiesViewModel.cs",
+              "RelativeToolTip": "CitySimulation\\ViewModels\\UtilitiesViewModel.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAswIQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:29:30.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ResourcesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\ResourcesViewModel.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\ViewModels\\ResourcesViewModel.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\ResourcesViewModel.cs",
+              "RelativeToolTip": "CitySimulation\\ViewModels\\ResourcesViewModel.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAA9wJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:29:02.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "CitySimulation\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:28:47.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "CitySimulation\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:28:28.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UtilityType.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityType.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Utilities\\UtilityType.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityType.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Utilities\\UtilityType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:27:29.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UtilityService.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityService.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Utilities\\UtilityService.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityService.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Utilities\\UtilityService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswF0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:27:13.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UtilityNetwork.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityNetwork.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Utilities\\UtilityNetwork.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityNetwork.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Utilities\\UtilityNetwork.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAqwEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:26:57.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UtilityConnection.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityConnection.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Utilities\\UtilityConnection.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\UtilityConnection.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Utilities\\UtilityConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:26:41.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResidentialBuilding.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\ResidentialBuilding.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Utilities\\ResidentialBuilding.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Utilities\\ResidentialBuilding.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Utilities\\ResidentialBuilding.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA+wCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:26:21.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResourceType.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceType.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Resources\\ResourceType.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceType.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Resources\\ResourceType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:26:04.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ResourceStorage.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceStorage.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Resources\\ResourceStorage.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceStorage.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Resources\\ResourceStorage.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:25:40.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ResourceMarket.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceMarket.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Resources\\ResourceMarket.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceMarket.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Resources\\ResourceMarket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:25:23.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResourceDeposit.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceDeposit.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Resources\\ResourceDeposit.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ResourceDeposit.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Resources\\ResourceDeposit.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA+wCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:25:02.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExtractionFacility.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ExtractionFacility.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\Models\\Resources\\ExtractionFacility.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\Models\\Resources\\ExtractionFacility.cs",
+              "RelativeToolTip": "CitySimulation\\Models\\Resources\\ExtractionFacility.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA+wEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:24:33.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "CitySimulation\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\MainWindow.xaml",
+              "RelativeToolTip": "CitySimulation\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T22:21:59.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CitySimulation\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\la692\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u0443\u043D\u0438\u0432\u0435\u0440\\2 \u043A\u0443\u0440\u0441\\1 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u043E\u043E\u043F\\CitySimulation\\CitySimulation\\MainWindow.xaml.cs",
+              "RelativeToolTip": "CitySimulation\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA+wCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:21:58.567Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
