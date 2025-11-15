@@ -1,0 +1,76 @@
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.exe
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.deps.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.runtimeconfig.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\App.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.lref
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.g.resources
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.GeneratedMSBuildEditorConfig.editorconfig
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfoInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfo.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.csproj.CoreCompileInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.sourcelink.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\refint\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.genruntimeconfig.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\GigaCity_Labor3_OOP\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\ref\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.exe
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.deps.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.runtimeconfig.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\App.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.lref
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.baml
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.g.resources
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.GeneratedMSBuildEditorConfig.editorconfig
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfoInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfo.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.csproj.CoreCompileInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\refint\CitySimulation.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.genruntimeconfig.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\ref\CitySimulation.dll
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.exe
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.deps.json
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.runtimeconfig.json
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.dll
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\bin\Debug\net8.0-windows\CitySimulation.pdb
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.baml
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.baml
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.g.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\EmergencyService\EmergencyServiceView.g.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\Views\ForeignRelations\ForeignRelationsView.g.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\App.g.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.cache
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation_MarkupCompile.lref
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\MainWindow.baml
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.g.resources
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.GeneratedMSBuildEditorConfig.editorconfig
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfoInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.AssemblyInfo.cs
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.csproj.CoreCompileInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.dll
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\refint\CitySimulation.dll
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.pdb
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\CitySimulation.genruntimeconfig.cache
+A:\Проекты по ООП\ФИНАЛ 15\city-simulation-project-master\CitySimulation\obj\Debug\net8.0-windows\ref\CitySimulation.dll
