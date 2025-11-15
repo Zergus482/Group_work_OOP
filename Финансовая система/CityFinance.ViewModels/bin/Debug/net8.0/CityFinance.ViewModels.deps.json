@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CityFinance.ViewModels/1.0.0": {
+        "dependencies": {
+          "TheFinancialSystem": "1.0.0"
+        },
+        "runtime": {
+          "CityFinance.ViewModels.dll": {}
+        }
+      },
+      "TheFinancialSystem/1.0.0": {
+        "runtime": {
+          "TheFinancialSystem.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CityFinance.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TheFinancialSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

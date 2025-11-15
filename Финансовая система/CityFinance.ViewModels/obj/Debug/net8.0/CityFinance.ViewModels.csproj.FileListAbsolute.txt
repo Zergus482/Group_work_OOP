@@ -1,0 +1,30 @@
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfoInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfo.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.CoreCompileInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.deps.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.AssemblyReference.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFina.10174187.Up2Date
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\refint\CityFinance.ViewModels.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\ref\CityFinance.ViewModels.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.deps.json
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.pdb
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.pdb
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.AssemblyReference.cache
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfoInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfo.cs
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.CoreCompileInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFina.10174187.Up2Date
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\refint\CityFinance.ViewModels.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.pdb
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\ref\CityFinance.ViewModels.dll
