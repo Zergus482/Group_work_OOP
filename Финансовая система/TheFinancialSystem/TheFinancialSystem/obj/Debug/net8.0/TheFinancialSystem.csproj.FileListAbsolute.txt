@@ -1,0 +1,33 @@
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+H:\ООП.Лаб3\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+G:\Daniil_work\Б.ПИН.ИИ.24.16\ООП\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll

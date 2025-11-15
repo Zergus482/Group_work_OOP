@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\\u041E\u041E\u041F.\u041B\u0430\u04313\\TheFinancialSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3B7C9C6-E491-4B3D-8DF6-F10AC3C0FC78}|TheFinancialSystem\\TheFinancialSystem.csproj|h:\\\u043E\u043E\u043F.\u043B\u0430\u04313\\thefinancialsystem\\thefinancialsystem\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3B7C9C6-E491-4B3D-8DF6-F10AC3C0FC78}|TheFinancialSystem\\TheFinancialSystem.csproj|solutionrelative:thefinancialsystem\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "H:\\\u041E\u041E\u041F.\u041B\u0430\u04313\\TheFinancialSystem\\TheFinancialSystem\\Class1.cs",
+              "RelativeDocumentMoniker": "TheFinancialSystem\\Class1.cs",
+              "ToolTip": "H:\\\u041E\u041E\u041F.\u041B\u0430\u04313\\TheFinancialSystem\\TheFinancialSystem\\Class1.cs",
+              "RelativeToolTip": "TheFinancialSystem\\Class1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:54:05.184Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
