@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\
+C:\Users\Нейтрон\source\repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\
 GigaCity_Labor3_OOP
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\App.xaml
-2-271880244
+C:\Users\Нейтрон\source\repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\App.xaml
+4-933674156
 
-19-1375135883
-203-1717428893
-FinancialWindow.xaml;MainWindow.xaml;
+29-934774715
+203-732318551
+FinancialWindow.xaml;MainWindow.xaml;Views\CellInfoView.xaml;Views\TrafficManagementView.xaml;
 
 False
 

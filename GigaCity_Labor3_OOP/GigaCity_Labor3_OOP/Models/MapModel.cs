@@ -11,7 +11,8 @@ namespace GigaCity_Labor3_OOP.Models
         public int Width { get; } = 100;
         public int Height { get; } = 100;
         public List<CellViewModel> Cells { get; private set; }
-        
+        public HashSet<(int x, int y)> RoadCoordinates { get; private set; }
+
         // Позиции аэропортов
         public int Airport1X { get; private set; }
         public int Airport1Y { get; private set; }
@@ -26,7 +27,60 @@ namespace GigaCity_Labor3_OOP.Models
 
         public MapModel()
         {
+            RoadCoordinates = new HashSet<(int, int)>();
             Cells = GenerateMap();
+            GenerateRoads();
+        }
+
+        private void GenerateRoads()
+        {
+            foreach (var cell in Cells)
+            {
+                if (cell.TerrainType == (byte)TerrainType.City)
+                {
+                    if (cell.Y % 6 == 2)
+                    {
+                        RoadCoordinates.Add((cell.X, cell.Y));
+                    }
+
+                    if (cell.X % 6 == 3)
+                    {
+                        RoadCoordinates.Add((cell.X, cell.Y));
+                    }
+                }
+
+                for (int x = 69; x < 70; x++)
+                {
+                    for (int y = 86; y < 100; y++)
+                    {
+                        RoadCoordinates.Add((x, y));
+                    }
+                }
+
+                for (int x = 0; x < 26; x++)
+                {
+                    for (int y = 32; y < 33; y++)
+                    {
+                        RoadCoordinates.Add((x, y));
+                    }
+                }
+
+                for (int x = 69; x < 94; x++)
+                {
+                    for (int y = 94; y < 95; y++)
+                    {
+                        RoadCoordinates.Add((x, y));
+                    }
+                }
+
+                RoadCoordinates.Add((13, 63));
+                RoadCoordinates.Add((14, 63));
+            }
+        }
+
+        public bool IsRoad(int x, int y)
+        {
+            return RoadCoordinates.Contains((x, y));
         }
 
         private List<CellViewModel> GenerateMap()

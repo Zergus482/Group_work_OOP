@@ -7,6 +7,8 @@ using System.Windows.Threading;
 using GigaCity_Labor3_OOP.Models;
 using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
+using GigaCity_Labor3_OOP.Services;
+using GigaCity_Labor3_OOP.ViewModels;
 
 namespace GigaCity_Labor3_OOP.ViewModels
 {
@@ -30,7 +32,25 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private DispatcherTimer _shipTimer;
         private bool _isShipDirectionToPort2 = true; // Направление: true = из порта 1 в порт 2, false = из порта 2 в порт 1
 
+        //Дороги и транспорт
+        private TrafficSimulationService _trafficSimulationService;
+        private PathFindingService _pathFindingService;
+        private TrafficManagementViewModel _trafficManagementViewModel;
+        private CellInfoViewModel _cellInfoViewModel;
+
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
+
+        public TrafficManagementViewModel TrafficManagementViewModel
+        {
+            get => _trafficManagementViewModel;
+            set { _trafficManagementViewModel = value; OnPropertyChanged(); }
+        }
+
+        public CellInfoViewModel CellInfoViewModel
+        {
+            get => _cellInfoViewModel;
+            set { _cellInfoViewModel = value; OnPropertyChanged(); }
+        }
 
         private CellViewModel _selectedCell;
         public CellViewModel SelectedCell
@@ -93,7 +113,16 @@ namespace GigaCity_Labor3_OOP.ViewModels
             Ships = new ObservableCollection<Ship>();
             InitializeShipSystem();
 
+            //Инициализация транспорта
+            _trafficSimulationService = new TrafficSimulationService(Map.RoadCoordinates);
+
+            _trafficManagementViewModel = new TrafficManagementViewModel(_trafficSimulationService, Map.RoadCoordinates);
+
+            _cellInfoViewModel = new CellInfoViewModel();
+
             SelectedCell = Map.Cells.FirstOrDefault();
+
+            PopulateInitialTraffic();
         }
 
         private void InitializePlaneSystem()
@@ -282,6 +311,39 @@ namespace GigaCity_Labor3_OOP.ViewModels
 
             // Меняем направление для следующего корабля
             _isShipDirectionToPort2 = !_isShipDirectionToPort2;
+        }
+
+        public void UpdateCellInfo(CellViewModel cell)
+        {
+            if (cell == null) return;
+
+            RoadViewModel road = null;
+
+            // Проверяем, является ли клетка дорогой, используя наш статический источник
+            if (Map.IsRoad(cell.X, cell.Y))
+            {
+                // Ищем соответствующий ViewModel дороги в коллекции
+                road = TrafficManagementViewModel.Roads.FirstOrDefault(r => r.X == cell.X && r.Y == cell.Y);
+            }
+
+            CellInfoViewModel.UpdateInfo(cell, road, TrafficManagementViewModel);
+        }
+
+        private void PopulateInitialTraffic()
+        {
+            // Маршруты-кольца вокруг центра города
+            var busRoute1 = new (int startX, int startY, int endX, int endY)[]
+            {
+                (30, 50, 70, 50), // Горизонтальная дорога через центр
+                (70, 50, 70, 70), // Вертикальная дорога вниз
+                (70, 70, 30, 70), // Горизонтальная дорога обратно
+                (30, 70, 30, 50)  // Вертикальная дорога вверх
+            };
+
+            foreach (var route in busRoute1)
+            {
+                _trafficManagementViewModel.AddVehicleOnRoute(VehicleType.Bus, route.startX, route.startY, route.endX, route.endY);
+            }
         }
 
         private void InitializeFinancialSystem()

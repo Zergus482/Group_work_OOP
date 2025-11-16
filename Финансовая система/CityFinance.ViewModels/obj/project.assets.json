@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Шалом\\.nuget\\packages\\": {},
+    "C:\\Users\\Нейтрон\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
       "projectName": "CityFinance.ViewModels",
-      "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
-      "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-      "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\obj\\",
+      "projectPath": "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\Нейтрон\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Нейтрон\\Source\\Repos\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Шалом\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Нейтрон\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -59,8 +59,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
-              "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
+            "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+              "projectPath": "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
             }
           }
         }
@@ -96,7 +96,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

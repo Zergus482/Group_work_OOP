@@ -12,6 +12,8 @@ using GigaCity_Labor3_OOP.Models;
 using GigaCity_Labor3_OOP.ViewModels;
 using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
+using System.Linq;
+using GigaCity_Labor3_OOP.Views;
 
 namespace GigaCity_Labor3_OOP
 {
@@ -57,8 +59,8 @@ namespace GigaCity_Labor3_OOP
             InitializeMap();
 
             // Обновляем тексты
-            UpdateYearText();
-            UpdatePopulationText();
+            //UpdateYearText();
+            //UpdatePopulationText();
 
             // Центрируем карту после загрузки
             Loaded += MainWindow_Loaded;
@@ -89,10 +91,22 @@ namespace GigaCity_Labor3_OOP
                 // Устанавливаем цвет
                 if (_terrainColors.TryGetValue(cell.TerrainType, out var color))
                 {
-                    rectangle.Fill = new SolidColorBrush(color);
+                    //rectangle.Fill = new SolidColorBrush(color);
+                    //rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
+                    //rectangle.StrokeThickness = 0.8; // Немного увеличили толщину границы
+
+                    //отображение дорог
+                    if (ViewModel.Map.IsRoad(cell.X, cell.Y))
+                    {
+                        rectangle.Fill = new SolidColorBrush(Color.FromRgb(64, 64, 64));
+                    }
+                    else
+                    {
+                        rectangle.Fill = new SolidColorBrush(color);
+                    }
                     rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
-                    rectangle.StrokeThickness = 0.8; // Немного увеличили толщину границы
-                    
+                    rectangle.StrokeThickness = 0.8;
+
                     // Для аэропортов делаем более заметную границу
                     if (cell.TerrainType == 7) // Airport
                     {
@@ -135,68 +149,18 @@ namespace GigaCity_Labor3_OOP
 
         private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(ViewModel.SelectedCell))
+            if (e.PropertyName == nameof(ViewModel.CurrentYear))
             {
-                UpdateSelectedCellInfo();
-            }
-            else if (e.PropertyName == nameof(ViewModel.CurrentYear))
-            {
-                UpdateYearText();
+                YearText.Text = $"Год: {ViewModel.CurrentYear}";
             }
             else if (e.PropertyName == nameof(ViewModel.Population))
             {
-                UpdatePopulationText();
+                PopulationText.Text = $"Население: {ViewModel.Population}";
             }
         }
+
+
         
-
-        private void UpdateSelectedCellInfo()
-        {
-            if (ViewModel.SelectedCell != null)
-            {
-                PositionXText.Text = $"X: {ViewModel.SelectedCell.X}";
-                PositionYText.Text = $"Y: {ViewModel.SelectedCell.Y}";
-                TerrainTypeText.Text = GetTerrainName(ViewModel.SelectedCell.TerrainType);
-                ResourceTypeText.Text = GetResourceName(ViewModel.SelectedCell.ResourceType);
-            }
-        }
-
-        private void UpdateYearText()
-        {
-            YearText.Text = $"Год: {ViewModel.CurrentYear}";
-        }
-
-        private void UpdatePopulationText()
-        {
-            PopulationText.Text = $"Население: {ViewModel.Population}";
-        }
-
-        private string GetTerrainName(byte terrainType)
-        {
-            return terrainType switch
-            {
-                1 => "Поляна",
-                2 => "Лес",
-                3 => "Горы",
-                4 => "Водоем",
-                5 => "Город",
-                _ => "Неизвестно"
-            };
-        }
-
-        private string GetResourceName(byte resourceType)
-        {
-            return resourceType switch
-            {
-                0 => "Нет ресурсов",
-                1 => "Металлы",
-                2 => "Нефть",
-                3 => "Газ",
-                4 => "Деревья",
-                5 => "Растения",
-                _ => "Неизвестно"
-            };
-        }
 
         #region Кнопки времени
 
@@ -312,6 +276,7 @@ namespace GigaCity_Labor3_OOP
             if (sender is Rectangle rectangle && rectangle.DataContext is CellViewModel cell)
             {
                 ViewModel.SelectedCell = cell;
+                ViewModel.UpdateCellInfo(cell);
             }
         }
 
@@ -481,6 +446,34 @@ namespace GigaCity_Labor3_OOP
             catch (Exception ex)
             {
                 MessageBox.Show($"Не удалось открыть финансовую систему: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void OpenTrafficManagementButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var trafficView = new GigaCity_Labor3_OOP.Views.TrafficManagementView
+                {
+                    DataContext = ViewModel.TrafficManagementViewModel
+                };
+
+                var hostWindow = new Window
+                {
+                    Title = "Управление трафиком",
+                    Content = trafficView,
+                    Width = 800,
+                    Height = 600,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                    Owner = this
+                };
+
+                hostWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Не удалось открыть управление трафиком: {ex.Message}", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
