@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {}
+    "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {}
   },
   "projects": {
-    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+    "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
         "projectName": "TheFinancialSystem",
-        "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
-        "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-        "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
+        "projectPath": "C:\\Users\\Нейтрон\\source\\repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "packagesPath": "C:\\Users\\Нейтрон\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Нейтрон\\Source\\Repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Шалом\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Нейтрон\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
