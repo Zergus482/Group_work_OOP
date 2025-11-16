@@ -11,6 +11,18 @@ namespace GigaCity_Labor3_OOP.Models
         public int Width { get; } = 100;
         public int Height { get; } = 100;
         public List<CellViewModel> Cells { get; private set; }
+        
+        // Позиции аэропортов
+        public int Airport1X { get; private set; }
+        public int Airport1Y { get; private set; }
+        public int Airport2X { get; private set; }
+        public int Airport2Y { get; private set; }
+        
+        // Позиции портов
+        public int Port1X { get; private set; }
+        public int Port1Y { get; private set; }
+        public int Port2X { get; private set; }
+        public int Port2Y { get; private set; }
 
         public MapModel()
         {
@@ -51,7 +63,13 @@ namespace GigaCity_Labor3_OOP.Models
             // 4. НОВЫЙ ШАГ: Рисуем учебные заведения ПОСЛЕ города
             DrawEducationalInstitutions(terrainMap, random);
 
-            // 5. Создаем ячейки с ресурсами
+            // 5. Размещаем аэропорты на удаленном расстоянии
+            PlaceAirports(terrainMap);
+
+            // 6. Размещаем порты на противоположных берегах водоемов
+            PlacePorts(terrainMap);
+
+            // 7. Создаем ячейки с ресурсами
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
@@ -151,8 +169,11 @@ namespace GigaCity_Labor3_OOP.Models
 
         private byte GetResourceType(byte terrainType, Random random)
         {
-            // Учебные заведения не имеют ресурсов
-            if (terrainType == (byte)TerrainType.City || terrainType == (byte)TerrainType.Educational) return 0;
+            // Учебные заведения, аэропорты и порты не имеют ресурсов
+            if (terrainType == (byte)TerrainType.City || 
+                terrainType == (byte)TerrainType.Educational || 
+                terrainType == (byte)TerrainType.Airport ||
+                terrainType == (byte)TerrainType.Port) return 0;
 
             double chance = random.NextDouble();
             return terrainType switch
@@ -174,7 +195,9 @@ namespace GigaCity_Labor3_OOP.Models
                 (byte)TerrainType.Mountains => "Горы",
                 (byte)TerrainType.Water => "Водоем",
                 (byte)TerrainType.City => "Город",
-                (byte)TerrainType.Educational => "Учебное заведение", // <-- НОВОЕ НАЗВАНИЕ
+                (byte)TerrainType.Educational => "Учебное заведение",
+                (byte)TerrainType.Airport => "Аэропорт",
+                (byte)TerrainType.Port => "Порт",
                 _ => "Неизвестно"
             };
         }
@@ -191,6 +214,110 @@ namespace GigaCity_Labor3_OOP.Models
                 (byte)ResourceType.Plants => "Растения",
                 _ => "Неизвестно"
             };
+        }
+
+        /// <summary>
+        /// Размещает 2 аэропорта на удаленном расстоянии друг от друга
+        /// </summary>
+        private void PlaceAirports(byte[,] terrainMap)
+        {
+            // Первый аэропорт на координатах (17, 73)
+            Airport1X = 17;
+            Airport1Y = 73;
+            
+            // Второй аэропорт в правом нижнем углу (максимально удален от первого)
+            Airport2X = 95;
+            Airport2Y = 95;
+            
+            // Размещаем аэропорты (3x3 клетки для каждого)
+            for (int dx = -1; dx <= 1; dx++)
+            {
+                for (int dy = -1; dy <= 1; dy++)
+                {
+                    int x1 = Airport1X + dx;
+                    int y1 = Airport1Y + dy;
+                    int x2 = Airport2X + dx;
+                    int y2 = Airport2Y + dy;
+                    
+                    if (x1 >= 0 && x1 < Width && y1 >= 0 && y1 < Height)
+                    {
+                        // Принудительно размещаем аэропорт (перезаписываем все, кроме других аэропортов)
+                        terrainMap[x1, y1] = (byte)TerrainType.Airport;
+                    }
+                    
+                    if (x2 >= 0 && x2 < Width && y2 >= 0 && y2 < Height)
+                    {
+                        // Принудительно размещаем аэропорт (перезаписываем все, кроме других аэропортов)
+                        terrainMap[x2, y2] = (byte)TerrainType.Airport;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Размещает 2 порта на противоположных берегах водоема
+        /// </summary>
+        private void PlacePorts(byte[,] terrainMap)
+        {
+            // Используем первый водоем (CenterX = 25, CenterY = 50, Radius = 12)
+            int waterCenterX = 25;
+            int waterCenterY = 50;
+            int waterRadius = 12;
+            
+            // Первый порт на левом берегу (западный берег)
+            Port1X = 22;
+            Port1Y = 33;
+
+            // Второй порт на правом берегу (восточный берег)
+            Port2X = 11;
+            Port2Y = 62;
+            
+            // Убеждаемся, что порты в пределах карты
+            if (Port1X < 0) Port1X = 0;
+            if (Port1X >= Width) Port1X = Width - 1;
+            if (Port1Y < 0) Port1Y = 0;
+            if (Port1Y >= Height) Port1Y = Height - 1;
+            
+            if (Port2X < 0) Port2X = 0;
+            if (Port2X >= Width) Port2X = Width - 1;
+            if (Port2Y < 0) Port2Y = 0;
+            if (Port2Y >= Height) Port2Y = Height - 1;
+            
+            // Размещаем порты (2x2 клетки для каждого)
+            for (int dx = 0; dx <= 1; dx++)
+            {
+                for (int dy = 0; dy <= 1; dy++)
+                {
+                    int x1 = Port1X + dx;
+                    int y1 = Port1Y + dy;
+                    int x2 = Port2X + dx;
+                    int y2 = Port2Y + dy;
+                    
+                    if (x1 >= 0 && x1 < Width && y1 >= 0 && y1 < Height)
+                    {
+                        // Размещаем порт только на суше (не на воде и не в городе)
+                        if (terrainMap[x1, y1] != (byte)TerrainType.Water && 
+                            terrainMap[x1, y1] != (byte)TerrainType.City &&
+                            terrainMap[x1, y1] != (byte)TerrainType.Educational &&
+                            terrainMap[x1, y1] != (byte)TerrainType.Airport)
+                        {
+                            terrainMap[x1, y1] = (byte)TerrainType.Port;
+                        }
+                    }
+                    
+                    if (x2 >= 0 && x2 < Width && y2 >= 0 && y2 < Height)
+                    {
+                        // Размещаем порт только на суше (не на воде и не в городе)
+                        if (terrainMap[x2, y2] != (byte)TerrainType.Water && 
+                            terrainMap[x2, y2] != (byte)TerrainType.City &&
+                            terrainMap[x2, y2] != (byte)TerrainType.Educational &&
+                            terrainMap[x2, y2] != (byte)TerrainType.Airport)
+                        {
+                            terrainMap[x2, y2] = (byte)TerrainType.Port;
+                        }
+                    }
+                }
+            }
         }
     }
 }
