@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using GigaCity_Labor3_OOP.Models;
 using GigaCity_Labor3_OOP.ViewModels;
@@ -28,8 +29,13 @@ namespace GigaCity_Labor3_OOP
             { 2, Color.FromRgb(34, 139, 34) },   // Forest
             { 3, Color.FromRgb(139, 69, 19) },   // Mountains
             { 4, Color.FromRgb(30, 144, 255) },  // Water
-            { 5, Color.FromRgb(105, 105, 105) }  // City
+            { 5, Color.FromRgb(105, 105, 105) }, // City
+            { 6, Color.FromRgb(255, 200, 0) },   // Educational
+            { 7, Color.FromRgb(0, 150, 255) }    // Airport - синий
         };
+
+        // Коллекция визуальных элементов самолетов
+        private readonly Dictionary<Plane, Polygon> _planeVisuals = new Dictionary<Plane, Polygon>();
 
         public MainWindow()
         {
@@ -39,6 +45,9 @@ namespace GigaCity_Labor3_OOP
 
             // Подписываемся на изменение свойств
             ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+
+            // Подписываемся на изменения коллекции самолетов
+            ViewModel.Planes.CollectionChanged += Planes_CollectionChanged;
 
             // Инициализируем карту
             InitializeMap();
@@ -61,6 +70,7 @@ namespace GigaCity_Labor3_OOP
             // Очищаем ItemsControl
             MapItemsControl.Items.Clear();
 
+            int airportCount = 0;
             // Создаем прямоугольники для каждой ячейки (увеличенные в 1.5 раза)
             foreach (var cell in ViewModel.Map.Cells)
             {
@@ -78,6 +88,22 @@ namespace GigaCity_Labor3_OOP
                     rectangle.Fill = new SolidColorBrush(color);
                     rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
                     rectangle.StrokeThickness = 0.8; // Немного увеличили толщину границы
+                    
+                    // Для аэропортов делаем более заметную границу
+                    if (cell.TerrainType == 7) // Airport
+                    {
+                        rectangle.Stroke = new SolidColorBrush(Colors.White);
+                        rectangle.StrokeThickness = 2;
+                        airportCount++;
+                        System.Diagnostics.Debug.WriteLine($"Аэропорт найден: X={cell.X}, Y={cell.Y}");
+                    }
+                }
+                else
+                {
+                    // Если цвет не найден, используем серый по умолчанию
+                    rectangle.Fill = new SolidColorBrush(Colors.Gray);
+                    rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
+                    rectangle.StrokeThickness = 0.8;
                 }
 
                 // Добавляем обработчик события
@@ -86,6 +112,10 @@ namespace GigaCity_Labor3_OOP
                 // Добавляем в ItemsControl
                 MapItemsControl.Items.Add(rectangle);
             }
+            
+            System.Diagnostics.Debug.WriteLine($"Всего аэропортов на карте: {airportCount}");
+            System.Diagnostics.Debug.WriteLine($"Аэропорт 1: [{ViewModel.Map.Airport1X}, {ViewModel.Map.Airport1Y}]");
+            System.Diagnostics.Debug.WriteLine($"Аэропорт 2: [{ViewModel.Map.Airport2X}, {ViewModel.Map.Airport2Y}]");
 
             // Увеличиваем размер канваса пропорционально
             MapCanvas.Width = 1500; // Было 1000, стало 1500
@@ -292,8 +322,136 @@ namespace GigaCity_Labor3_OOP
         protected override void OnClosed(EventArgs e)
         {
             ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
+            if (ViewModel.Planes != null)
+            {
+                ViewModel.Planes.CollectionChanged -= Planes_CollectionChanged;
+            }
             Loaded -= MainWindow_Loaded;
             base.OnClosed(e);
+        }
+
+        private void Planes_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            // Обновляем UI в UI потоке
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                if (e.NewItems != null)
+                {
+                    foreach (Plane plane in e.NewItems)
+                    {
+                        CreatePlaneVisual(plane);
+                        plane.PropertyChanged += Plane_PropertyChanged;
+                    }
+                }
+
+                if (e.OldItems != null)
+                {
+                    foreach (Plane plane in e.OldItems)
+                    {
+                        RemovePlaneVisual(plane);
+                        plane.PropertyChanged -= Plane_PropertyChanged;
+                    }
+                }
+            }), System.Windows.Threading.DispatcherPriority.Normal);
+        }
+
+        private void CreatePlaneVisual(Plane plane)
+        {
+            // Создаем белый треугольник (самолет)
+            var triangle = new Polygon
+            {
+                Fill = new SolidColorBrush(Colors.White),
+                Stroke = new SolidColorBrush(Colors.DarkGray),
+                StrokeThickness = 1,
+                ToolTip = $"Самолет [{plane.FromAirportX},{plane.FromAirportY}] -> [{plane.ToAirportX},{plane.ToAirportY}]",
+                Opacity = 1.0
+            };
+
+            // Размер треугольника (увеличенный)
+            double size = 20;
+            double halfSize = size / 2;
+
+            // Вычисляем направление движения для поворота треугольника
+            double dx = plane.ToAirportX - plane.FromAirportX;
+            double dy = plane.ToAirportY - plane.FromAirportY;
+            double angle = Math.Atan2(dy, dx) * 180 / Math.PI;
+
+            // Создаем точки треугольника (направлен вправо, затем поворачиваем)
+            var points = new PointCollection
+            {
+                new Point(halfSize, 0),                    // Вершина (нос самолета)
+                new Point(-halfSize, -halfSize * 0.6),      // Левая нижняя точка
+                new Point(-halfSize * 0.3, 0),              // Центральная точка хвоста
+                new Point(-halfSize, halfSize * 0.6)       // Правая нижняя точка
+            };
+
+            triangle.Points = points;
+
+            // Поворачиваем треугольник в направлении движения (центр поворота - центр треугольника)
+            var transform = new RotateTransform(angle, 0, 0);
+            triangle.RenderTransformOrigin = new Point(0.5, 0.5);
+            triangle.RenderTransform = transform;
+
+            // Устанавливаем Z-Index, чтобы самолеты были поверх карты
+            Panel.SetZIndex(triangle, 1000);
+
+            // Убеждаемся, что координаты в пределах Canvas
+            double x = Math.Max(0, Math.Min(MapCanvas.Width - size, plane.X - halfSize));
+            double y = Math.Max(0, Math.Min(MapCanvas.Height - size, plane.Y - halfSize));
+            
+            Canvas.SetLeft(triangle, x);
+            Canvas.SetTop(triangle, y);
+
+            MapCanvas.Children.Add(triangle);
+            _planeVisuals[plane] = triangle;
+            
+            // Отладочный вывод
+            System.Diagnostics.Debug.WriteLine($"Самолет создан: X={plane.X}, Y={plane.Y}, Canvas X={x}, Canvas Y={y}");
+        }
+
+        private void RemovePlaneVisual(Plane plane)
+        {
+            if (_planeVisuals.TryGetValue(plane, out var polygon))
+            {
+                MapCanvas.Children.Remove(polygon);
+                _planeVisuals.Remove(plane);
+            }
+        }
+
+        private void Plane_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            // Обновляем UI в UI потоке
+            if (sender is Plane plane && _planeVisuals.TryGetValue(plane, out var polygon))
+            {
+                if (e.PropertyName == nameof(Plane.X) || e.PropertyName == nameof(Plane.Y))
+                {
+                    Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        // Убеждаемся, что координаты в пределах Canvas
+                        double size = 20;
+                        double halfSize = size / 2;
+                        double x = Math.Max(0, Math.Min(MapCanvas.Width - size, plane.X - halfSize));
+                        double y = Math.Max(0, Math.Min(MapCanvas.Height - size, plane.Y - halfSize));
+                        Canvas.SetLeft(polygon, x);
+                        Canvas.SetTop(polygon, y);
+                        
+                        // Обновляем поворот треугольника в направлении движения (на основе текущей позиции)
+                        double currentDx = plane.ToAirportX * 15.0 + 7.5 - plane.X;
+                        double currentDy = plane.ToAirportY * 15.0 + 7.5 - plane.Y;
+                        double angle = Math.Atan2(currentDy, currentDx) * 180 / Math.PI;
+                        if (polygon.RenderTransform is RotateTransform rotateTransform)
+                        {
+                            rotateTransform.Angle = angle;
+                        }
+                        else
+                        {
+                            // Если трансформация еще не создана, создаем ее
+                            polygon.RenderTransform = new RotateTransform(angle);
+                            polygon.RenderTransformOrigin = new Point(0.5, 0.5);
+                        }
+                    }), System.Windows.Threading.DispatcherPriority.Render);
+                }
+            }
         }
 
         private void OpenThirdAppButton_Click(object sender, RoutedEventArgs e)

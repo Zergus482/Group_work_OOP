@@ -11,6 +11,12 @@ namespace GigaCity_Labor3_OOP.Models
         public int Width { get; } = 100;
         public int Height { get; } = 100;
         public List<CellViewModel> Cells { get; private set; }
+        
+        // Позиции аэропортов
+        public int Airport1X { get; private set; }
+        public int Airport1Y { get; private set; }
+        public int Airport2X { get; private set; }
+        public int Airport2Y { get; private set; }
 
         public MapModel()
         {
@@ -51,7 +57,10 @@ namespace GigaCity_Labor3_OOP.Models
             // 4. НОВЫЙ ШАГ: Рисуем учебные заведения ПОСЛЕ города
             DrawEducationalInstitutions(terrainMap, random);
 
-            // 5. Создаем ячейки с ресурсами
+            // 5. Размещаем аэропорты на удаленном расстоянии
+            PlaceAirports(terrainMap);
+
+            // 6. Создаем ячейки с ресурсами
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
@@ -151,8 +160,10 @@ namespace GigaCity_Labor3_OOP.Models
 
         private byte GetResourceType(byte terrainType, Random random)
         {
-            // Учебные заведения не имеют ресурсов
-            if (terrainType == (byte)TerrainType.City || terrainType == (byte)TerrainType.Educational) return 0;
+            // Учебные заведения и аэропорты не имеют ресурсов
+            if (terrainType == (byte)TerrainType.City || 
+                terrainType == (byte)TerrainType.Educational || 
+                terrainType == (byte)TerrainType.Airport) return 0;
 
             double chance = random.NextDouble();
             return terrainType switch
@@ -174,7 +185,8 @@ namespace GigaCity_Labor3_OOP.Models
                 (byte)TerrainType.Mountains => "Горы",
                 (byte)TerrainType.Water => "Водоем",
                 (byte)TerrainType.City => "Город",
-                (byte)TerrainType.Educational => "Учебное заведение", // <-- НОВОЕ НАЗВАНИЕ
+                (byte)TerrainType.Educational => "Учебное заведение",
+                (byte)TerrainType.Airport => "Аэропорт",
                 _ => "Неизвестно"
             };
         }
@@ -191,6 +203,44 @@ namespace GigaCity_Labor3_OOP.Models
                 (byte)ResourceType.Plants => "Растения",
                 _ => "Неизвестно"
             };
+        }
+
+        /// <summary>
+        /// Размещает 2 аэропорта на удаленном расстоянии друг от друга
+        /// </summary>
+        private void PlaceAirports(byte[,] terrainMap)
+        {
+            // Первый аэропорт на координатах (17, 73)
+            Airport1X = 17;
+            Airport1Y = 73;
+            
+            // Второй аэропорт в правом нижнем углу (максимально удален от первого)
+            Airport2X = 95;
+            Airport2Y = 95;
+            
+            // Размещаем аэропорты (3x3 клетки для каждого)
+            for (int dx = -1; dx <= 1; dx++)
+            {
+                for (int dy = -1; dy <= 1; dy++)
+                {
+                    int x1 = Airport1X + dx;
+                    int y1 = Airport1Y + dy;
+                    int x2 = Airport2X + dx;
+                    int y2 = Airport2Y + dy;
+                    
+                    if (x1 >= 0 && x1 < Width && y1 >= 0 && y1 < Height)
+                    {
+                        // Принудительно размещаем аэропорт (перезаписываем все, кроме других аэропортов)
+                        terrainMap[x1, y1] = (byte)TerrainType.Airport;
+                    }
+                    
+                    if (x2 >= 0 && x2 < Width && y2 >= 0 && y2 < Height)
+                    {
+                        // Принудительно размещаем аэропорт (перезаписываем все, кроме других аэропортов)
+                        terrainMap[x2, y2] = (byte)TerrainType.Airport;
+                    }
+                }
+            }
         }
     }
 }

@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
       "projectName": "CityFinance.ViewModels",
-      "projectPath": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
       "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-      "outputPath": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\CityFinance.ViewModels\\obj\\",
+      "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -59,8 +59,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
-              "projectPath": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
+            "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+              "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
             }
           }
         }

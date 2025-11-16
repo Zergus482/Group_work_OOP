@@ -1,7 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Windows.Threading;
 using GigaCity_Labor3_OOP.Models;
 using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
@@ -17,6 +19,11 @@ namespace GigaCity_Labor3_OOP.ViewModels
         public FinancialOverviewViewModel FinancialOverview { get; private set; }
         private Budget _cityBudget;
         private Tax _taxPolicy;
+
+        // Система самолетов
+        public ObservableCollection<Plane> Planes { get; private set; }
+        private DispatcherTimer _planeTimer;
+        private bool _isPlaneDirectionToAirport2 = true; // Направление: true = из аэропорта 1 в аэропорт 2, false = из аэропорта 2 в аэропорт 1
 
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
 
@@ -73,7 +80,106 @@ namespace GigaCity_Labor3_OOP.ViewModels
             // Инициализация финансовой системы
             InitializeFinancialSystem();
 
+            // Инициализация системы самолетов
+            Planes = new ObservableCollection<Plane>();
+            InitializePlaneSystem();
+
             SelectedCell = Map.Cells.FirstOrDefault();
+        }
+
+        private void InitializePlaneSystem()
+        {
+            // Создаем таймер для запуска самолетов каждые 30 секунд
+            _planeTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(30)
+            };
+            _planeTimer.Tick += PlaneTimer_Tick;
+            _planeTimer.Start();
+
+            // Создаем таймер для обновления позиций самолетов (анимация)
+            var animationTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(30) // Обновление каждые 30мс для более плавной анимации
+            };
+            animationTimer.Tick += AnimationTimer_Tick;
+            animationTimer.Start();
+
+            // Запускаем первый самолет с небольшой задержкой, чтобы UI успел загрузиться
+            var startTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(1000)
+            };
+            startTimer.Tick += (s, e) =>
+            {
+                startTimer.Stop();
+                CreateNewPlane();
+            };
+            startTimer.Start();
+        }
+
+        private void PlaneTimer_Tick(object sender, EventArgs e)
+        {
+            // Создаем новый самолет
+            CreateNewPlane();
+        }
+
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            // Обновляем позиции всех активных самолетов
+            var planesToRemove = new System.Collections.Generic.List<Plane>();
+            
+            foreach (var plane in Planes)
+            {
+                plane.Update();
+                
+                // Удаляем неактивные самолеты
+                if (!plane.IsActive)
+                {
+                    planesToRemove.Add(plane);
+                }
+            }
+
+            // Удаляем неактивные самолеты
+            foreach (var plane in planesToRemove)
+            {
+                Planes.Remove(plane);
+            }
+        }
+
+        private void CreateNewPlane()
+        {
+            int fromX, fromY, toX, toY;
+
+            if (_isPlaneDirectionToAirport2)
+            {
+                // Летим из аэропорта 1 в аэропорт 2
+                // Поменяли местами X и Y для точки отправления
+                fromX = Map.Airport1Y;  // Было Airport1X, стало Airport1Y
+                fromY = Map.Airport1X;  // Было Airport1Y, стало Airport1X
+                toX = Map.Airport2X;
+                toY = Map.Airport2Y;
+            }
+            else
+            {
+                // Летим из аэропорта 2 в аэропорт 1
+                fromX = Map.Airport2X;
+                fromY = Map.Airport2Y;
+                // Поменяли местами X и Y для точки назначения
+                toX = Map.Airport1Y;  // Было Airport1X, стало Airport1Y
+                toY = Map.Airport1X;  // Было Airport1Y, стало Airport1X
+            }
+
+            var plane = new Plane(fromX, fromY, toX, toY);
+            
+            // Отладочный вывод
+            string direction = _isPlaneDirectionToAirport2 ? "из аэропорта 1 в аэропорт 2" : "из аэропорта 2 в аэропорт 1";
+            System.Diagnostics.Debug.WriteLine($"Создание самолета: {direction} [{fromX},{fromY}] -> [{toX},{toY}], позиция: X={plane.X}, Y={plane.Y}");
+            
+            Planes.Add(plane);
+
+            // Меняем направление для следующего самолета
+            _isPlaneDirectionToAirport2 = !_isPlaneDirectionToAirport2;
         }
 
         private void InitializeFinancialSystem()
