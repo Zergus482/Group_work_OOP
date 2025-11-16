@@ -222,7 +222,7 @@
                          Background="#1A1A1A">
 
                 <Canvas x:Name="MapCanvas" Width="1500" Height="1500" Background="#1A1A1A">
-                    <ItemsControl x:Name="MapItemsControl">
+                    <ItemsControl x:Name="MapItemsControl" Panel.ZIndex="0">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid Columns="100" Width="1500" Height="1500"/>

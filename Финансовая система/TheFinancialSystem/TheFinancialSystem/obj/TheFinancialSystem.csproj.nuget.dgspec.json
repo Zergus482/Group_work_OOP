@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {}
+    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {}
   },
   "projects": {
-    "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
         "projectName": "TheFinancialSystem",
-        "projectPath": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
         "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-        "outputPath": "A:\\Проекты по ООП\\ФИНАЛ 15\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
+        "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
