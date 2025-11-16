@@ -31,7 +31,8 @@ namespace GigaCity_Labor3_OOP
             { 4, Color.FromRgb(30, 144, 255) },  // Water
             { 5, Color.FromRgb(105, 105, 105) }, // City
             { 6, Color.FromRgb(255, 200, 0) },   // Educational
-            { 7, Color.FromRgb(0, 150, 255) }    // Airport - синий
+            { 7, Color.FromRgb(0, 150, 255) },   // Airport - синий
+            { 8, Color.FromRgb(139, 90, 43) }    // Port - коричневый
         };
 
         // Коллекция визуальных элементов самолетов
@@ -48,6 +49,9 @@ namespace GigaCity_Labor3_OOP
 
             // Подписываемся на изменения коллекции самолетов
             ViewModel.Planes.CollectionChanged += Planes_CollectionChanged;
+
+            // Инициализируем визуализацию кораблей
+            InitializeShipVisuals();
 
             // Инициализируем карту
             InitializeMap();
@@ -96,6 +100,13 @@ namespace GigaCity_Labor3_OOP
                         rectangle.StrokeThickness = 2;
                         airportCount++;
                         System.Diagnostics.Debug.WriteLine($"Аэропорт найден: X={cell.X}, Y={cell.Y}");
+                    }
+                    
+                    // Для портов делаем более заметную границу
+                    if (cell.TerrainType == 8) // Port
+                    {
+                        rectangle.Stroke = new SolidColorBrush(Colors.Yellow);
+                        rectangle.StrokeThickness = 2;
                     }
                 }
                 else
@@ -325,6 +336,10 @@ namespace GigaCity_Labor3_OOP
             if (ViewModel.Planes != null)
             {
                 ViewModel.Planes.CollectionChanged -= Planes_CollectionChanged;
+            }
+            if (ViewModel.Ships != null)
+            {
+                ViewModel.Ships.CollectionChanged -= Ships_CollectionChanged;
             }
             Loaded -= MainWindow_Loaded;
             base.OnClosed(e);

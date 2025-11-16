@@ -25,6 +25,11 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private DispatcherTimer _planeTimer;
         private bool _isPlaneDirectionToAirport2 = true; // Направление: true = из аэропорта 1 в аэропорт 2, false = из аэропорта 2 в аэропорт 1
 
+        // Система кораблей
+        public ObservableCollection<Ship> Ships { get; private set; }
+        private DispatcherTimer _shipTimer;
+        private bool _isShipDirectionToPort2 = true; // Направление: true = из порта 1 в порт 2, false = из порта 2 в порт 1
+
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
 
         private CellViewModel _selectedCell;
@@ -83,6 +88,10 @@ namespace GigaCity_Labor3_OOP.ViewModels
             // Инициализация системы самолетов
             Planes = new ObservableCollection<Plane>();
             InitializePlaneSystem();
+
+            // Инициализация системы кораблей
+            Ships = new ObservableCollection<Ship>();
+            InitializeShipSystem();
 
             SelectedCell = Map.Cells.FirstOrDefault();
         }
@@ -155,8 +164,8 @@ namespace GigaCity_Labor3_OOP.ViewModels
             {
                 // Летим из аэропорта 1 в аэропорт 2
                 // Поменяли местами X и Y для точки отправления
-                fromX = Map.Airport1Y;  // Было Airport1X, стало Airport1Y
-                fromY = Map.Airport1X;  // Было Airport1Y, стало Airport1X
+                fromX = Map.Airport1Y;  
+                fromY = Map.Airport1X;  
                 toX = Map.Airport2X;
                 toY = Map.Airport2Y;
             }
@@ -180,6 +189,99 @@ namespace GigaCity_Labor3_OOP.ViewModels
 
             // Меняем направление для следующего самолета
             _isPlaneDirectionToAirport2 = !_isPlaneDirectionToAirport2;
+        }
+
+        private void InitializeShipSystem()
+        {
+            // Создаем таймер для запуска кораблей каждые 45 секунд
+            _shipTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(45)
+            };
+            _shipTimer.Tick += ShipTimer_Tick;
+            _shipTimer.Start();
+
+            // Создаем таймер для обновления позиций кораблей (анимация)
+            var animationTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(30) // Обновление каждые 30мс для плавной анимации
+            };
+            animationTimer.Tick += ShipAnimationTimer_Tick;
+            animationTimer.Start();
+
+            // Запускаем первый корабль с небольшой задержкой
+            var startTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMilliseconds(1500)
+            };
+            startTimer.Tick += (s, e) =>
+            {
+                startTimer.Stop();
+                CreateNewShip();
+            };
+            startTimer.Start();
+        }
+
+        private void ShipTimer_Tick(object sender, EventArgs e)
+        {
+            // Создаем новый корабль
+            CreateNewShip();
+        }
+
+        private void ShipAnimationTimer_Tick(object sender, EventArgs e)
+        {
+            // Обновляем позиции всех активных кораблей
+            var shipsToRemove = new System.Collections.Generic.List<Ship>();
+            
+            foreach (var ship in Ships)
+            {
+                ship.Update();
+                
+                // Удаляем неактивные корабли
+                if (!ship.IsActive)
+                {
+                    shipsToRemove.Add(ship);
+                }
+            }
+
+            // Удаляем неактивные корабли
+            foreach (var ship in shipsToRemove)
+            {
+                Ships.Remove(ship);
+            }
+        }
+
+        private void CreateNewShip()
+        {
+            int fromX, fromY, toX, toY;
+
+            if (_isShipDirectionToPort2)
+            {
+                // Летим из порта 1 в порт 2
+                fromX = Map.Port1Y+2;
+                fromY = Map.Port1X+1;
+                toX = Map.Port2Y;
+                toY = Map.Port2X;
+            }
+            else
+            {
+                // Летим из порта 2 в порт 1
+                fromX = Map.Port2Y;
+                fromY = Map.Port2X;
+                toX = Map.Port1Y+2;
+                toY = Map.Port1X+1;
+            }
+
+            var ship = new Ship(fromX, fromY, toX, toY);
+            
+            // Отладочный вывод
+            string direction = _isShipDirectionToPort2 ? "из порта 1 в порт 2" : "из порта 2 в порт 1";
+            System.Diagnostics.Debug.WriteLine($"Создание корабля: {direction} [{fromX},{fromY}] -> [{toX},{toY}], позиция: X={ship.X}, Y={ship.Y}");
+            
+            Ships.Add(ship);
+
+            // Меняем направление для следующего корабля
+            _isShipDirectionToPort2 = !_isShipDirectionToPort2;
         }
 
         private void InitializeFinancialSystem()

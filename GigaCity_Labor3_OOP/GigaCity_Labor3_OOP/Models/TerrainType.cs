@@ -14,6 +14,7 @@ namespace GigaCity_Labor3_OOP.Models
         Water = 4,    // Водоемы
         City = 5,      // Город
         Educational = 6, // <-- НОВЫЙ ТИП: Образовательное учреждение
-        Airport = 7   // Аэропорт
+        Airport = 7,   // Аэропорт
+        Port = 8       // Порт
     }
 }
