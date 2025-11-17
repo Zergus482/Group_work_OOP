@@ -315,7 +315,11 @@ namespace GigaCity_Labor3_OOP.ViewModels
 
         public void UpdateCellInfo(CellViewModel cell)
         {
-            if (cell == null) return;
+            if (cell == null)
+            {
+                CellInfoViewModel.UpdateInfo(null, null, TrafficManagementViewModel, false, false);
+                return;
+            }
 
             RoadViewModel road = null;
 
@@ -326,7 +330,10 @@ namespace GigaCity_Labor3_OOP.ViewModels
                 road = TrafficManagementViewModel.Roads.FirstOrDefault(r => r.X == cell.X && r.Y == cell.Y);
             }
 
-            CellInfoViewModel.UpdateInfo(cell, road, TrafficManagementViewModel);
+            bool isPark = Map.IsPark(cell.X, cell.Y);
+            bool isBikePath = Map.IsBikePath(cell.X, cell.Y);
+
+            CellInfoViewModel.UpdateInfo(cell, road, TrafficManagementViewModel, isPark, isBikePath);
         }
 
         private void PopulateInitialTraffic()

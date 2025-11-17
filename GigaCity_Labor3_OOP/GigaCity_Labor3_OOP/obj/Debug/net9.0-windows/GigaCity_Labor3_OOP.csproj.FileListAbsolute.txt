@@ -182,3 +182,9 @@ C:\Users\Нейтрон\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.g.cs
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.baml
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.baml
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.baml
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.g.cs
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.g.cs
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.lref

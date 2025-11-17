@@ -84,7 +84,8 @@
                         </StackPanel>
                     </Border>
 
-                    <views:CellInfoView DataContext="{Binding CellInfoViewModel}" Margin="0,0,0,10"/>
+                    <views:CellInfoView DataContext="{Binding CellInfoViewModel}" Margin="0,0,0,10"
+                                        Loaded="CellInfoView_Loaded" />
 
                     <!-- Время -->
                     <Border Background="#4A2F5F" BorderBrush="#6A4F7F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">

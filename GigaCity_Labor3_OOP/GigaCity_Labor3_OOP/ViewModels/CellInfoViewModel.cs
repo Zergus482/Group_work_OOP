@@ -11,6 +11,8 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private CellViewModel _cell;
         private RoadViewModel _road;
         private ObservableCollection<VehicleViewModel> _vehicles;
+        private bool _isPark;
+        private bool _isBikePath;
 
         public CellViewModel Cell
         {
@@ -46,18 +48,49 @@ namespace GigaCity_Labor3_OOP.ViewModels
             }
         }
 
+        public bool IsPark
+        {
+            get => _isPark;
+            set
+            {
+                _isPark = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(SpecialInfo));
+            }
+        }
+
+        public bool IsBikePath
+        {
+            get => _isBikePath;
+            set
+            {
+                _isBikePath = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(SpecialInfo));
+            }
+        }
+
         public string Coordinates => Cell != null ? $"[{Cell.X}, {Cell.Y}]" : "";
         public string TerrainType => Cell != null ? GetTerrainName(Cell.TerrainType) : "";
         public string ResourceType => Cell != null ? GetResourceName(Cell.ResourceType) : "";
 
         public string RoadInfo => Road != null ? $"Дорога (Скорость: {Road.SpeedLimit} км/ч)" : "Нет дороги";
+        public string SpecialInfo
+        {
+            get
+            {
+                if (IsPark) return "Парк";
+                if (IsBikePath) return "Велодорожка";
+                return "—";
+            }
+        }
 
         public CellInfoViewModel()
         {
             Vehicles = new ObservableCollection<VehicleViewModel>();
         }
 
-        public void UpdateInfo(CellViewModel cell, RoadViewModel road, TrafficManagementViewModel trafficViewModel)
+        public void UpdateInfo(CellViewModel cell, RoadViewModel road, TrafficManagementViewModel trafficViewModel, bool isPark, bool isBikePath)
         {
             // ПРОВЕРКА 1: Вызывается ли метод вообще?
             System.Diagnostics.Debug.WriteLine($"--- CellInfoViewModel.UpdateInfo вызван для клетки ({cell?.X}, {cell?.Y}) ---");
@@ -75,6 +108,8 @@ namespace GigaCity_Labor3_OOP.ViewModels
             // Устанавливаем свойства (это должно вызвать обновление UI)
             Cell = cell;
             Road = road;
+            IsPark = isPark;
+            IsBikePath = isBikePath;
 
             // Очищаем и заполняем локальную коллекцию транспорта
             Vehicles.Clear();

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -103,7 +104,7 @@ namespace GigaCity_Labor3_OOP
             _shipVisuals[ship] = shipShape;
             
             // Отладочный вывод
-            System.Diagnostics.Debug.WriteLine($"Корабль создан: X={ship.X}, Y={ship.Y}, Canvas X={x}, Canvas Y={y}");
+            Debug.WriteLine($"Корабль создан: X={ship.X}, Y={ship.Y}, Canvas X={x}, Canvas Y={y}");
         }
 
         private void RemoveShipVisual(Ship ship)

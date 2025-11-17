@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GigaCity_Labor3_OOP.Services;
 
 namespace GigaCity_Labor3_OOP.Models
 {
@@ -25,11 +26,16 @@ namespace GigaCity_Labor3_OOP.Models
         public int Port2X { get; private set; }
         public int Port2Y { get; private set; }
 
+        // Парки и велодорожки
+        public HashSet<(int x, int y)> ParkCells { get; private set; }
+        public HashSet<(int x, int y)> BikePathCells { get; private set; }
+
         public MapModel()
         {
             RoadCoordinates = new HashSet<(int, int)>();
             Cells = GenerateMap();
             GenerateRoads();
+            GenerateParksAndBikePaths();
         }
 
         private void GenerateRoads()
@@ -372,6 +378,31 @@ namespace GigaCity_Labor3_OOP.Models
                     }
                 }
             }
+        }
+
+        private void GenerateParksAndBikePaths()
+        {
+            var planner = new ParkAndBikePlanner(this);
+            ParkCells = planner.GenerateParks();
+            BikePathCells = planner.GenerateBikePaths(ParkCells);
+        }
+
+        public bool IsPark(int x, int y)
+        {
+            return ParkCells != null && ParkCells.Contains((x, y));
+        }
+
+        public bool IsBikePath(int x, int y)
+        {
+            return BikePathCells != null && BikePathCells.Contains((x, y));
+        }
+
+        public CellViewModel GetCell(int x, int y)
+        {
+            if (x < 0 || x >= Width || y < 0 || y >= Height) return null;
+            int index = x * Height + y;
+            if (index < 0 || index >= Cells.Count) return null;
+            return Cells[index];
         }
     }
 }

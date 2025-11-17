@@ -37,6 +37,10 @@ namespace GigaCity_Labor3_OOP
             { 8, Color.FromRgb(139, 90, 43) }    // Port - коричневый
         };
 
+        private readonly Color _roadColor = Color.FromRgb(64, 64, 64);
+        private readonly Color _parkColor = Color.FromRgb(0x8E, 0xDB, 0x12);
+        private readonly Color _bikePathColor = Color.FromRgb(0xE6, 0xE8, 0x84);
+
         // Коллекция визуальных элементов самолетов
         private readonly Dictionary<Plane, Polygon> _planeVisuals = new Dictionary<Plane, Polygon>();
 
@@ -91,19 +95,26 @@ namespace GigaCity_Labor3_OOP
                 // Устанавливаем цвет
                 if (_terrainColors.TryGetValue(cell.TerrainType, out var color))
                 {
-                    //rectangle.Fill = new SolidColorBrush(color);
-                    //rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
-                    //rectangle.StrokeThickness = 0.8; // Немного увеличили толщину границы
+                    Color fillColor;
 
-                    //отображение дорог
                     if (ViewModel.Map.IsRoad(cell.X, cell.Y))
                     {
-                        rectangle.Fill = new SolidColorBrush(Color.FromRgb(64, 64, 64));
+                        fillColor = _roadColor;
+                    }
+                    else if (ViewModel.Map.IsPark(cell.X, cell.Y))
+                    {
+                        fillColor = _parkColor;
+                    }
+                    else if (ViewModel.Map.IsBikePath(cell.X, cell.Y))
+                    {
+                        fillColor = _bikePathColor;
                     }
                     else
                     {
-                        rectangle.Fill = new SolidColorBrush(color);
+                        fillColor = color;
                     }
+
+                    rectangle.Fill = new SolidColorBrush(fillColor);
                     rectangle.Stroke = new SolidColorBrush(Color.FromRgb(50, 50, 50));
                     rectangle.StrokeThickness = 0.8;
 
@@ -133,6 +144,22 @@ namespace GigaCity_Labor3_OOP
 
                 // Добавляем обработчик события
                 rectangle.MouseEnter += Rectangle_MouseEnter;
+
+                // Обновляем подсказку
+                string tooltip = cell.ToolTip;
+                if (ViewModel.Map.IsPark(cell.X, cell.Y))
+                {
+                    tooltip += "\nЗона: Парк";
+                }
+                else if (ViewModel.Map.IsBikePath(cell.X, cell.Y))
+                {
+                    tooltip += "\nЗона: Велодорожка";
+                }
+                else if (ViewModel.Map.IsRoad(cell.X, cell.Y))
+                {
+                    tooltip += "\nЗона: Дорога";
+                }
+                rectangle.ToolTip = tooltip;
 
                 // Добавляем в ItemsControl
                 MapItemsControl.Items.Add(rectangle);
@@ -476,6 +503,11 @@ namespace GigaCity_Labor3_OOP
                 MessageBox.Show($"Не удалось открыть управление трафиком: {ex.Message}", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void CellInfoView_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
