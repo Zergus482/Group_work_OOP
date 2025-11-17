@@ -43,24 +43,33 @@
   <ItemGroup>
     <Compile Include="Agriculture\Models\AgriculturalProduction.cs" />
     <Compile Include="Agriculture\Models\AgriculturalProductType.cs" />
-    <Compile Include="Agriculture\Models\AgricultureManager.cs" />
+    <Compile Include="Agriculture\Models\FarmModel.cs" />
+    <Compile Include="Agriculture\Services\AgricultureManager.cs" />
+    <Compile Include="Agriculture\Models\Greenhouse.cs" />
+    <Compile Include="Agriculture\Models\LivestockFarm.cs" />
+    <Compile Include="Agriculture\Models\Plantation.cs" />
+    <Compile Include="Agriculture\Services\CropRotationService.cs" />
+    <Compile Include="Agriculture\Services\IrrigationService.cs" />
+    <Compile Include="Agriculture\Services\SeasonalEffectsService.cs" />
     <Compile Include="ChemicalIndustry\Models\ChemicalPlant.cs" />
-    <Compile Include="Agriculture\Models\Farm.cs" />
     <Compile Include="Agriculture\Models\FarmType.cs" />
     <Compile Include="Agriculture\Services\IndustryIntegrationService.cs" />
     <Compile Include="ChemicalIndustry\Models\ChemicalProduction.cs" />
+    <Compile Include="ChemicalIndustry\Models\ChemicalProductType.cs" />
+    <Compile Include="ChemicalIndustry\Models\PollutionSystem.cs" />
+    <Compile Include="ChemicalIndustry\Models\SafetySystem.cs" />
+    <Compile Include="ChemicalIndustry\Services\ChemicalIndustryManager.cs" />
+    <Compile Include="ChemicalIndustry\Services\QualityControlService.cs" />
+    <Compile Include="ChemicalIndustry\Services\WasteManagementService.cs" />
     <Compile Include="Common\Enums\ResourceType.cs" />
     <Compile Include="Common\Interfaces\IPollutable.cs" />
     <Compile Include="Common\Interfaces\IResourceConsumer.cs" />
     <Compile Include="Common\Interfaces\IResourceProducer.cs" />
     <Compile Include="Common\Interfaces\IUpgradable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IndustryIntegrationService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Agriculture\ViewModels\" />
-    <Folder Include="ChemicalIndustry\Services\" />
-    <Folder Include="ChemicalIndustry\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\city-simulation-project-master\CitySimulation\CitySimulation.csproj">
       <Project>{d6239f56-d3a8-c148-9e7d-c2708759c059}</Project>

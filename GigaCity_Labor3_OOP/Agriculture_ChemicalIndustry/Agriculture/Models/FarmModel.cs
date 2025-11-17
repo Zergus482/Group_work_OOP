@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Agriculture_ChemicalIndustry.Common.Enums;
-using Agriculture_ChemicalIndustry.Common.Interfaces;
+using TheFinancialSystem;
+using CitySimulation.Industries.Common.Enums;
+using CitySimulation.Industries.Common.Interfaces;
+using CitySimulation.Industries.Common.Models;
 
-namespace Agriculture_ChemicalIndustry.Agriculture.Models
+namespace CitySimulation.Industries.Agriculture.Models
 {
     /// <summary>
     /// Базовая модель фермы
     /// </summary>
-    public class Farm : Organization, IResourceConsumer, IResourceProducer, IUpgradable
+    public class FarmModel : IndustryOrganization, IResourceConsumer, IResourceProducer, IUpgradable
     {
         public FarmType Type { get; set; }
-        public double Area { get; set; } // общая площадь в гектарах
-        public double UsedArea { get; set; } // используемая площадь
+        public double Area { get; set; }
+        public double UsedArea { get; set; }
         public int WorkerCapacity { get; set; }
-        public double Efficiency { get; set; } = 0.8; // эффективность (0-1)
+        public double Efficiency { get; set; } = 0.8;
         public List<AgriculturalProduction> CurrentProductions { get; set; }
         public Dictionary<AgriculturalProductType, double> Storage { get; set; }
 
@@ -27,7 +29,7 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         public int UpgradeLevel { get; private set; } = 1;
         public int MaxUpgradeLevel { get; } = 5;
 
-        public Farm(string name, FarmType farmType, double area, int workerCapacity, decimal initialBudget)
+        public FarmModel(string name, FarmType farmType, double area, int workerCapacity, decimal initialBudget)
             : base(name, "Agriculture", initialBudget)
         {
             Type = farmType;
@@ -68,7 +70,7 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
 
             // Устанавливаем базовые затраты и доходы для финансовой системы
             Costs = (decimal)DailyOperatingCost;
-            Revenue = (decimal)(BaseProductivity * Area * Efficiency * 0.5); // начальный ожидаемый доход
+            Revenue = (decimal)(BaseProductivity * Area * Efficiency * 0.5);
         }
 
         /// <summary>
@@ -130,7 +132,7 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
             foreach (var productType in productsToSell)
             {
                 // Продаем часть хранимой продукции
-                var sellPercentage = 0.2; // 20% в день
+                var sellPercentage = 0.2;
                 var sellAmount = Storage[productType] * sellPercentage;
                 revenue += (decimal)sellAmount * GetMarketPrice(productType);
                 Storage[productType] -= sellAmount;
@@ -146,21 +148,21 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         private decimal GetMarketPrice(AgriculturalProductType productType)
         {
             // Базовая цена за тонну
-            return productType switch
+            switch (productType)
             {
-                AgriculturalProductType.Wheat => 15000m,
-                AgriculturalProductType.Corn => 12000m,
-                AgriculturalProductType.Rice => 20000m,
-                AgriculturalProductType.Potatoes => 10000m,
-                AgriculturalProductType.Tomatoes => 25000m,
-                AgriculturalProductType.Apples => 30000m,
-                AgriculturalProductType.Beef => 150000m,
-                AgriculturalProductType.Pork => 120000m,
-                AgriculturalProductType.Chicken => 80000m,
-                AgriculturalProductType.Milk => 50000m,
-                AgriculturalProductType.Eggs => 60000m,
-                _ => 20000m
-            };
+                case AgriculturalProductType.Wheat: return 15000m;
+                case AgriculturalProductType.Corn: return 12000m;
+                case AgriculturalProductType.Rice: return 20000m;
+                case AgriculturalProductType.Potatoes: return 10000m;
+                case AgriculturalProductType.Tomatoes: return 25000m;
+                case AgriculturalProductType.Apples: return 30000m;
+                case AgriculturalProductType.Beef: return 150000m;
+                case AgriculturalProductType.Pork: return 120000m;
+                case AgriculturalProductType.Chicken: return 80000m;
+                case AgriculturalProductType.Milk: return 50000m;
+                case AgriculturalProductType.Eggs: return 60000m;
+                default: return 20000m;
+            }
         }
 
         // Реализация IResourceConsumer
@@ -168,9 +170,9 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         {
             var requirements = new Dictionary<ResourceType, double>
             {
-                [ResourceType.Electricity] = Area * 10,
-                [ResourceType.Water] = Area * 1000,
-                [ResourceType.Labor] = WorkerCapacity * 8
+                { ResourceType.Electricity, Area * 10 },
+                { ResourceType.Water, Area * 1000 },
+                { ResourceType.Labor, WorkerCapacity * 8 }
             };
 
             // Добавляем требования от текущих производств
@@ -182,7 +184,7 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
                     if (requirements.ContainsKey(req.Key))
                         requirements[req.Key] += req.Value;
                     else
-                        requirements[req.Key] = req.Value;
+                        requirements.Add(req.Key, req.Value);
                 }
             }
 
@@ -192,15 +194,17 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         public void ConsumeResources(Dictionary<ResourceType, double> resources)
         {
             // В реальной реализации здесь бы вычитались ресурсы
-            // Для упрощения просто проверяем доступность
         }
 
         public bool CanOperate(Dictionary<ResourceType, double> availableResources)
         {
             var requirements = GetDailyResourceRequirements();
-            return requirements.All(req =>
-                availableResources.ContainsKey(req.Key) &&
-                availableResources[req.Key] >= req.Value);
+            foreach (var req in requirements)
+            {
+                if (!availableResources.ContainsKey(req.Key) || availableResources[req.Key] < req.Value)
+                    return false;
+            }
+            return true;
         }
 
         // Реализация IResourceProducer
@@ -209,15 +213,18 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
             var production = new Dictionary<ResourceType, double>();
 
             // Рассчитываем производство на основе текущих культур
-            foreach (var prod in CurrentProductions.Where(p => p.IsHarvestable))
+            foreach (var prod in CurrentProductions)
             {
-                var productResource = ConvertToResourceType(prod.ProductType);
-                var amount = prod.CalculateExpectedYield() * Efficiency;
+                if (prod.IsHarvestable)
+                {
+                    var productResource = ConvertToResourceType(prod.ProductType);
+                    var amount = prod.CalculateExpectedYield() * Efficiency;
 
-                if (production.ContainsKey(productResource))
-                    production[productResource] += amount;
-                else
-                    production[productResource] = amount;
+                    if (production.ContainsKey(productResource))
+                        production[productResource] += amount;
+                    else
+                        production.Add(productResource, amount);
+                }
             }
 
             return production;
@@ -231,22 +238,36 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         private ResourceType ConvertToResourceType(AgriculturalProductType productType)
         {
             // Преобразуем тип продукции в тип ресурса
-            return productType switch
+            switch (productType)
             {
-                AgriculturalProductType.Wheat or AgriculturalProductType.Corn or AgriculturalProductType.Rice
-                    => ResourceType.Grain,
-                AgriculturalProductType.Potatoes or AgriculturalProductType.Tomatoes or AgriculturalProductType.Carrots
-                    => ResourceType.Vegetables,
-                AgriculturalProductType.Apples or AgriculturalProductType.Oranges or AgriculturalProductType.Grapes
-                    => ResourceType.Fruits,
-                AgriculturalProductType.Beef or AgriculturalProductType.Pork => ResourceType.Meat,
-                AgriculturalProductType.Chicken => ResourceType.Poultry,
-                AgriculturalProductType.Milk => ResourceType.Dairy,
-                AgriculturalProductType.Eggs => ResourceType.Eggs,
-                AgriculturalProductType.Wool => ResourceType.Wool,
-                AgriculturalProductType.Fish => ResourceType.Fish,
-                _ => ResourceType.RawMaterials
-            };
+                case AgriculturalProductType.Wheat:
+                case AgriculturalProductType.Corn:
+                case AgriculturalProductType.Rice:
+                    return ResourceType.Grain;
+                case AgriculturalProductType.Potatoes:
+                case AgriculturalProductType.Tomatoes:
+                case AgriculturalProductType.Carrots:
+                    return ResourceType.Vegetables;
+                case AgriculturalProductType.Apples:
+                case AgriculturalProductType.Oranges:
+                case AgriculturalProductType.Grapes:
+                    return ResourceType.Fruits;
+                case AgriculturalProductType.Beef:
+                case AgriculturalProductType.Pork:
+                    return ResourceType.Meat;
+                case AgriculturalProductType.Chicken:
+                    return ResourceType.Poultry;
+                case AgriculturalProductType.Milk:
+                    return ResourceType.Dairy;
+                case AgriculturalProductType.Eggs:
+                    return ResourceType.Eggs;
+                case AgriculturalProductType.Wool:
+                    return ResourceType.Wool;
+                case AgriculturalProductType.Fish:
+                    return ResourceType.Fish;
+                default:
+                    return ResourceType.RawMaterials;
+            }
         }
 
         // Реализация IUpgradable
@@ -280,7 +301,7 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         public bool AddProduction(AgriculturalProduction production)
         {
             if (UsedArea + production.AreaUsed > Area)
-                return false; // Недостаточно площади
+                return false;
 
             CurrentProductions.Add(production);
             UsedArea += production.AreaUsed;
