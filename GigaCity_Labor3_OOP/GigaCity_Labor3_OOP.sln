@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigaCity_Labor3_OOP", "GigaCity_Labor3_OOP\GigaCity_Labor3_OOP.csproj", "{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityFinance.ViewModels", "..\Финансовая система\CityFinance.ViewModels\CityFinance.ViewModels.csproj", "{9BBE737C-2E72-A7CB-A176-561C9FFEB4A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFinancialSystem", "..\Финансовая система\TheFinancialSystem\TheFinancialSystem\TheFinancialSystem.csproj", "{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agriculture_ChemicalIndustry", "Agriculture_ChemicalIndustry\Agriculture_ChemicalIndustry.csproj", "{A343146F-3E62-4183-A55C-BCDB08268353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A343146F-3E62-4183-A55C-BCDB08268353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A343146F-3E62-4183-A55C-BCDB08268353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A343146F-3E62-4183-A55C-BCDB08268353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A343146F-3E62-4183-A55C-BCDB08268353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

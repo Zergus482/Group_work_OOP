@@ -31,3 +31,15 @@ A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\
 A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
 A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
 A:\Проекты по ООП\ФИНАЛ 15\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.sourcelink.json
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Documents\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll

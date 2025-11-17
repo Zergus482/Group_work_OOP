@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A343146F-3E62-4183-A55C-BCDB08268353}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agriculture_ChemicalIndustry</RootNamespace>
+    <AssemblyName>Agriculture_ChemicalIndustry</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agriculture\Models\AgriculturalProductType.cs" />
+    <Compile Include="Agriculture\Models\AgricultureManager.cs" />
+    <Compile Include="Agriculture\Models\ChemicalPlant.cs" />
+    <Compile Include="Agriculture\Models\Farm.cs" />
+    <Compile Include="Agriculture\Models\FarmType.cs" />
+    <Compile Include="Agriculture\Services\IndustryIntegrationService.cs" />
+    <Compile Include="Common\Enums\ResourceType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Agriculture\ViewModels\" />
+    <Folder Include="ChemicalIndustry\Models\" />
+    <Folder Include="ChemicalIndustry\Services\" />
+    <Folder Include="ChemicalIndustry\ViewModels\" />
+    <Folder Include="Common\Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\city-simulation-project-master\CitySimulation\CitySimulation.csproj">
+      <Project>{d6239f56-d3a8-c148-9e7d-c2708759c059}</Project>
+      <Name>CitySimulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Финансовая система\CityFinance.ViewModels\CityFinance.ViewModels.csproj">
+      <Project>{9bbe737c-2e72-a7cb-a176-561c9ffeb4a3}</Project>
+      <Name>CityFinance.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Финансовая система\TheFinancialSystem\TheFinancialSystem\TheFinancialSystem.csproj">
+      <Project>{1f15d719-d6e6-72dd-4292-7f8b9989ddb7}</Project>
+      <Name>TheFinancialSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP.csproj">
+      <Project>{bb45cb63-0dfe-42f9-b150-b0f606ca57d0}</Project>
+      <Name>GigaCity_Labor3_OOP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
