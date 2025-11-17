@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Agriculture_ChemicalIndustry.Common.Enums
 {
+    /// <summary>
+    /// Типы ресурсов в системе
+    /// </summary>
     public enum ResourceType
     {
-        // Основные ресурсы
+        // Энергетические ресурсы
         Electricity,
         Water,
         Labor,
 
-        // Сельскохозяйственные
+        // Сельскохозяйственная продукция
         Grain,
         Vegetables,
         Fruits,
@@ -21,19 +24,29 @@ namespace Agriculture_ChemicalIndustry.Common.Enums
         Dairy,
         Poultry,
         Fish,
+        Eggs,
+        Wool,
 
-        // Химические
+        // Химическая продукция
         Fertilizers,
         Pesticides,
+        Herbicides,
         Pharmaceuticals,
         Plastics,
         Petrochemicals,
         BasicChemicals,
+        SyntheticMaterials,
 
-        // Сырье
+        // Сырьевые ресурсы
         Oil,
         Gas,
         Minerals,
-        Chemicals
+        Chemicals,
+        RawMaterials,
+
+        // Побочные продукты
+        Waste,
+        Pollution,
+        OrganicWaste
     }
 }

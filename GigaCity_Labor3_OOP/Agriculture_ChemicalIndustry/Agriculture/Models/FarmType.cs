@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Agriculture_ChemicalIndustry.Agriculture.Models
 {
+    /// <summary>
+    /// Типы ферм
+    /// </summary>
     public enum FarmType
     {
         FieldCrops,     // Полевые культуры
@@ -13,6 +16,8 @@ namespace Agriculture_ChemicalIndustry.Agriculture.Models
         Plantation,     // Плантация
         Livestock,      // Животноводство
         PoultryFarm,    // Птицеферма
-        FishFarm        // Рыбоводство
+        FishFarm,       // Рыбоводство
+        DairyFarm,      // Молочная ферма
+        MixedFarm       // Смешанное хозяйство
     }
 }
