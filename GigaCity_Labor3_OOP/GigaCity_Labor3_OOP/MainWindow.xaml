@@ -47,7 +47,17 @@
                                        FontSize="14" 
                                        Foreground="White" 
                                        Margin="0,0,0,8"/>
-
+                            <Button x:Name="OpenIndustriesButton" 
+                                Content="Открыть промышленность" 
+                                Click="OpenIndustriesButton_Click"
+                                Background="#5F3F7F" 
+                                Foreground="White"
+                                BorderBrush="#7F5F9F"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                ToolTip="Открыть окно управления промышленностью"
+                                Margin="0,5,0,0"/>
                             <Button x:Name="OpenThirdAppButton" 
                                 Content="Открыть финансовую систему" 
                                 Click="OpenThirdAppButton_Click"

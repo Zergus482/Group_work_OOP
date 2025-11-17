@@ -67,9 +67,11 @@
     <Compile Include="Common\Interfaces\IResourceProducer.cs" />
     <Compile Include="Common\Interfaces\IUpgradable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IndustryIntegrationService.cs" />
+    <Compile Include="Common\Enums\IndustryIntegrationService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\city-simulation-project-master\CitySimulation\CitySimulation.csproj">
       <Project>{d6239f56-d3a8-c148-9e7d-c2708759c059}</Project>
@@ -82,10 +84,6 @@
     <ProjectReference Include="..\..\Финансовая система\TheFinancialSystem\TheFinancialSystem\TheFinancialSystem.csproj">
       <Project>{1f15d719-d6e6-72dd-4292-7f8b9989ddb7}</Project>
       <Name>TheFinancialSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP.csproj">
-      <Project>{bb45cb63-0dfe-42f9-b150-b0f606ca57d0}</Project>
-      <Name>GigaCity_Labor3_OOP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Agriculture_ChemicalIndustry.Services
+namespace Agriculture_ChemicalIndustry.Common.Enums
 {
     /// <summary>
     /// Сервис интеграции отраслей

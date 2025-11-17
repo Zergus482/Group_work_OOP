@@ -73,6 +73,32 @@
         }
       }
     },
+    "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\Agriculture_ChemicalIndustry\\Agriculture_ChemicalIndustry.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\Agriculture_ChemicalIndustry\\Agriculture_ChemicalIndustry.csproj",
+        "projectName": "Agriculture_ChemicalIndustry",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\Agriculture_ChemicalIndustry\\Agriculture_ChemicalIndustry.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\city-simulation-project-master\\CitySimulation\\CitySimulation.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\city-simulation-project-master\\CitySimulation\\CitySimulation.csproj"
+              },
+              "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj"
+              },
+              "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -104,6 +130,9 @@
             "projectReferences": {
               "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\city-simulation-project-master\\CitySimulation\\CitySimulation.csproj": {
                 "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\city-simulation-project-master\\CitySimulation\\CitySimulation.csproj"
+              },
+              "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\Agriculture_ChemicalIndustry\\Agriculture_ChemicalIndustry.csproj": {
+                "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\Agriculture_ChemicalIndustry\\Agriculture_ChemicalIndustry.csproj"
               },
               "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {
                 "projectPath": "C:\\Users\\user\\Documents\\GitHub\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj"

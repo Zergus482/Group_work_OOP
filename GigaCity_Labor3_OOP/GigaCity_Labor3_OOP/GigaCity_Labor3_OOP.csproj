@@ -12,6 +12,7 @@
     <ProjectReference Include="..\..\city-simulation-project-master\CitySimulation\CitySimulation.csproj" />
     <ProjectReference Include="..\..\Финансовая система\CityFinance.ViewModels\CityFinance.ViewModels.csproj" />
     <ProjectReference Include="..\..\Финансовая система\TheFinancialSystem\TheFinancialSystem\TheFinancialSystem.csproj" />
+    <ProjectReference Include="..\Agriculture_ChemicalIndustry\Agriculture_ChemicalIndustry.csproj" />
   </ItemGroup>
 
 </Project>

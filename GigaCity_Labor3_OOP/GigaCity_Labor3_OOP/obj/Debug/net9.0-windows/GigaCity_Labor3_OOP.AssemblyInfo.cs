@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GigaCity_Labor3_OOP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a0e7fec5b3939a8e3dc76addd636381dc5dcf14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b2ad1d08a7da5b71ec5e4a0e96aba296f2a614f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GigaCity_Labor3_OOP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GigaCity_Labor3_OOP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

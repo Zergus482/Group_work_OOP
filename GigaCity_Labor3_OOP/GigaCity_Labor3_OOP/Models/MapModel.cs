@@ -192,5 +192,28 @@ namespace GigaCity_Labor3_OOP.Models
                 _ => "Неизвестно"
             };
         }
+
+        private void DrawIndustrialZones(byte[,] terrainMap, Random random)
+        {
+            // Рисуем сельскохозяйственные зоны
+            var farmZones = new[]
+                {
+            new { CenterX = 30, CenterY = 30, Type = (byte)TerrainType.Farmland, Radius = 8 },
+            new { CenterX = 70, CenterY = 70, Type = (byte)TerrainType.Farmland, Radius = 10 },
+            new { CenterX = 30, CenterY = 70, Type = (byte)TerrainType.Farmland, Radius = 6 }
+            };
+
+            // Рисуем химические заводы
+            var chemicalZones = new[]
+            {
+                new { CenterX = 20, CenterY = 80, Type = (byte)TerrainType.ChemicalPlant, Radius = 5 },
+                new { CenterX = 80, CenterY = 20, Type = (byte)TerrainType.ChemicalPlant, Radius = 6 }
+            };
+
+            foreach (var zone in farmZones.Concat(chemicalZones))
+            {
+                DrawZone(terrainMap, zone.CenterX, zone.CenterY, zone.Radius, zone.Type, random);
+            }
+        }
     }
 }

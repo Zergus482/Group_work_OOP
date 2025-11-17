@@ -52,7 +52,7 @@ namespace GigaCity_Labor3_OOP {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GigaCity_Labor3_OOP;component/financialwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GigaCity_Labor3_OOP;V1.0.0.0;component/financialwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FinancialWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

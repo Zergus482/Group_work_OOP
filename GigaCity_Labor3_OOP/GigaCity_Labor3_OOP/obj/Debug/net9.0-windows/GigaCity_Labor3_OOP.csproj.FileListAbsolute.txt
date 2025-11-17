@@ -143,3 +143,5 @@ C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor
 C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
 C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.genruntimeconfig.cache
 C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\ref\GigaCity_Labor3_OOP.dll
+C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\IndustriesWindow.baml
+C:\Users\user\Documents\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\IndustriesWindow.g.cs

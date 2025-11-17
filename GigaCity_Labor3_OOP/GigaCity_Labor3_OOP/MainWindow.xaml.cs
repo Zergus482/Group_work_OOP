@@ -20,6 +20,8 @@ namespace GigaCity_Labor3_OOP
 
         private Point _lastMousePosition;
         private bool _isPanning = false;
+        
+        public IndustriesViewModel Industries { get; private set; }
 
         // Цвета для типов местности
         private readonly Dictionary<byte, Color> _terrainColors = new Dictionary<byte, Color>
@@ -28,7 +30,10 @@ namespace GigaCity_Labor3_OOP
             { 2, Color.FromRgb(34, 139, 34) },   // Forest
             { 3, Color.FromRgb(139, 69, 19) },   // Mountains
             { 4, Color.FromRgb(30, 144, 255) },  // Water
-            { 5, Color.FromRgb(105, 105, 105) }  // City
+            { 5, Color.FromRgb(105, 105, 105) }, // City
+            { 6, Color.FromRgb(255, 215, 0) },   // Educational - золотой
+            { 7, Color.FromRgb(210, 180, 140) }, // Farmland - светло-коричневый
+            { 8, Color.FromRgb(178, 34, 34) }    // ChemicalPlant - темно-красный
         };
 
         public MainWindow()
@@ -54,6 +59,22 @@ namespace GigaCity_Labor3_OOP
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             CenterMap();
+        }
+
+        private void OpenIndustriesButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var industriesWindow = new IndustriesWindow();
+                industriesWindow.DataContext = ViewModel;
+                industriesWindow.Owner = this;
+                industriesWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Не удалось открыть промышленность: {ex.Message}", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void InitializeMap()
