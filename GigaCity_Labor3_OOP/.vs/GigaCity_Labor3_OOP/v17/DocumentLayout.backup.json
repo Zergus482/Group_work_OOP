@@ -1,18 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|a:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u043E\u043E\u043F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\group_work\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\gigacity_labor3_oop\\gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|a:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u043E\u043E\u043F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\group_work\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|a:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u043E\u043E\u043F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\group_work\\gigacity_labor3_oop\\gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\economy\\economysimulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\viewmodels\\economy\\economysimulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\desktop\\\u043D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +29,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,49 +37,87 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EconomySimulationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAvwOgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T22:47:46.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PropertyPathWorker.cs",
+              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "ViewState": "AgIAAKkEAAAAAAAAAAAlwLcEAAATAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T09:34:06.867Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
-              "ToolTip": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
               "RelativeToolTip": "GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAOMBAAAAAAAAAAAowP4BAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANMCAAAAAAAAAAAAwNMCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:18:29.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T16:18:29.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ParkAndBikePlanner.cs",
-              "DocumentMoniker": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "ToolTip": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
               "RelativeToolTip": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T15:52:37.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\MainWindow.xaml",
-              "ToolTip": "A:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B \u043F\u043E \u041E\u041E\u041F\\\u0434\u043B\u044F \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u044F\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml*",
-              "RelativeToolTip": "GigaCity_Labor3_OOP\\MainWindow.xaml*",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-16T19:39:16.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T19:39:16.981Z"
             }
           ]
         },
@@ -83,10 +128,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

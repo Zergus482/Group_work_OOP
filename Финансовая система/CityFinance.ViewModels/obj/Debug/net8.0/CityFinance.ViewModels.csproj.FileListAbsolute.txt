@@ -60,3 +60,19 @@ C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая сис�
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\refint\CityFinance.ViewModels.dll
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.pdb
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\ref\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.deps.json
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\CityFinance.ViewModels.pdb
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.AssemblyInfo.cs
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.sourcelink.json
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFina.10174187.Up2Date
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\refint\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\CityFinance.ViewModels.pdb
+C:\Users\user\Desktop\Новая папка\Финансовая система\CityFinance.ViewModels\obj\Debug\net8.0\ref\CityFinance.ViewModels.dll

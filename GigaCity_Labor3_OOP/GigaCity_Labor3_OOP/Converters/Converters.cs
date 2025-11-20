@@ -68,4 +68,18 @@ namespace GigaCity_Labor3_OOP.Converters
             return Colors.Transparent;
         }
     }
+
+    public class BooleanToPauseLabelConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            bool isPaused = value is bool flag && flag;
+            return isPaused ? "Продолжить" : "Пауза";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return Binding.DoNothing;
+        }
+    }
 }
