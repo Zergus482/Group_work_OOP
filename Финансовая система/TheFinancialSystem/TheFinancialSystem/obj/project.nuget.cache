@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "b3RFAHx7wNI=",
+  "dgSpecHash": "dzJGh5plVtQ=",
   "success": true,
-  "projectFilePath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\3 лаба\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
+  ],
   "logs": []
 }

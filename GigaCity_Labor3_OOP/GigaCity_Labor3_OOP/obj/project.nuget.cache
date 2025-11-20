@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "itgGDrLIy2Q=",
+  "dgSpecHash": "1pziCdTO2Cw=",
   "success": true,
-  "projectFilePath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\3 лаба\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.11\\microsoft.windowsdesktop.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.11\\microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.11\\microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
+    "C:\\Users\\sasha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.11\\microsoft.netcore.app.host.win-x64.9.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

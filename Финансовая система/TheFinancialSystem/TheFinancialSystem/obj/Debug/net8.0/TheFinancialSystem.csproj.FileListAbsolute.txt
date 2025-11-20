@@ -55,3 +55,15 @@ C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая сис�
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.sourcelink.json
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+E:\3 лаба\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
