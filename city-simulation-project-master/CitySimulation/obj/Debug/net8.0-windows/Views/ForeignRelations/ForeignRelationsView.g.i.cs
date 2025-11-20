@@ -52,8 +52,7 @@ namespace CitySimulation.Views.ForeignRelations {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CitySimulation;V1.0.0.0;component/views/foreignrelations/foreignrelationsview.xa" +
-                    "ml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CitySimulation;component/views/foreignrelations/foreignrelationsview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ForeignRelations\ForeignRelationsView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

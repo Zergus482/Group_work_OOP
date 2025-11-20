@@ -1,0 +1,55 @@
+<UserControl x:Class="GigaCity_Labor3_OOP.Views.ProductionGraphView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Background="White">
+            <Canvas Name="ProductionCanvas" Width="600" Height="300" SizeChanged="ProductionCanvas_SizeChanged">
+                <!-- Оси и сетка -->
+                <Line Name="YAxis" X1="40" Y1="20" X2="40" Y2="280" Stroke="Black" StrokeThickness="2"/>
+                <Line Name="XAxis" X1="40" Y1="280" X2="560" Y2="280" Stroke="Black" StrokeThickness="2"/>
+                
+                <!-- Подписи осей -->
+                <TextBlock Name="XAxisLabel" Canvas.Left="280" Canvas.Top="285" Text="Время" 
+                           FontSize="11" HorizontalAlignment="Center" Foreground="Black"/>
+            </Canvas>
+        </Border>
+        
+        <!-- Легенда -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="SteelBlue" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Сталь" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="SaddleBrown" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Доски" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="Orange" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Топливо" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="Purple" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Химикаты" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="Gold" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Провода" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <Rectangle Width="20" Height="3" Fill="LightBlue" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBlock Text="Охладитель" VerticalAlignment="Center" Foreground="White" FontSize="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

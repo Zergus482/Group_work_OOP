@@ -724,6 +724,22 @@ namespace GigaCity_Labor3_OOP
                 stackPanel.Children.Add(productionPanel);
             }
 
+            // Добавляем график производства ресурсов
+            var graphLabel = new TextBlock
+            {
+                Text = "График производства:",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Foreground = Brushes.White,
+                Margin = new Thickness(0, 15, 0, 10)
+            };
+            stackPanel.Children.Add(graphLabel);
+
+            var productionGraph = new Views.ProductionGraphView();
+            productionGraph.SetEconomySimulation(ViewModel.EconomySimulation);
+            productionGraph.Margin = new Thickness(0, 0, 0, 15);
+            stackPanel.Children.Add(productionGraph);
+
             // Показываем информацию о потоках
             var flowsLabel = new TextBlock
             {
@@ -1029,6 +1045,13 @@ namespace GigaCity_Labor3_OOP
         {
             try
             {
+                // Обновляем TrafficManagementViewModel с ссылкой на EconomySimulation
+                if (ViewModel.TrafficManagementViewModel != null)
+                {
+                    // Если нужно обновить ссылку, создаем новый экземпляр
+                    // Но лучше передать через конструктор при создании
+                }
+
                 var trafficView = new GigaCity_Labor3_OOP.Views.TrafficManagementView
                 {
                     DataContext = ViewModel.TrafficManagementViewModel

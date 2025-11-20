@@ -52,8 +52,7 @@ namespace CitySimulation.Views.EmergencyService {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CitySimulation;V1.0.0.0;component/views/emergencyservice/emergencyserviceview.xa" +
-                    "ml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CitySimulation;component/views/emergencyservice/emergencyserviceview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\EmergencyService\EmergencyServiceView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

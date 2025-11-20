@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Новая папка\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
       "projectName": "TheFinancialSystem",
-      "projectPath": "C:\\Users\\user\\Desktop\\Новая папка\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+      "projectPath": "C:\\Users\\user\\Source\\Repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Новая папка\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
+      "outputPath": "C:\\Users\\user\\Source\\Repos\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
