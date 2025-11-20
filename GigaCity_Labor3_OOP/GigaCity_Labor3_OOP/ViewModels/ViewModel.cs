@@ -8,7 +8,6 @@ using GigaCity_Labor3_OOP.Models;
 using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
 using GigaCity_Labor3_OOP.Services;
-using GigaCity_Labor3_OOP.ViewModels;
 
 namespace GigaCity_Labor3_OOP.ViewModels
 {
@@ -21,6 +20,8 @@ namespace GigaCity_Labor3_OOP.ViewModels
         public FinancialOverviewViewModel FinancialOverview { get; private set; }
         private Budget _cityBudget;
         private Tax _taxPolicy;
+        private ObservableCollection<Citizen> _citizens;
+        private ObservableCollection<Company> _companies;
 
         // Система самолетов
         public ObservableCollection<Plane> Planes { get; private set; }
@@ -37,6 +38,10 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private PathFindingService _pathFindingService;
         private TrafficManagementViewModel _trafficManagementViewModel;
         private CellInfoViewModel _cellInfoViewModel;
+        
+        // Энергетика и коммуникации
+        private EnergyModel.EnergySimulationService? _energyService;
+        private CommsModel.CommunicationsSimulationService? _commsService;
 
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
 
@@ -366,11 +371,11 @@ namespace GigaCity_Labor3_OOP.ViewModels
             _cityBudget = new Budget(initialBudget: 1_000_000m, policy: _taxPolicy);
 
             // Создаем коллекции для финансовой системы
-            var citizens = new ObservableCollection<Citizen>();
-            var companies = new ObservableCollection<Company>();
+            _citizens = new ObservableCollection<Citizen>();
+            _companies = new ObservableCollection<Company>();
 
             // Инициализируем финансовую ViewModel
-            FinancialOverview = new FinancialOverviewViewModel(_cityBudget, citizens, companies);
+            FinancialOverview = new FinancialOverviewViewModel(_cityBudget, _citizens, _companies);
 
             // Первоначальное создание финансовых агентов
             UpdateFinancialAgents();
@@ -378,13 +383,9 @@ namespace GigaCity_Labor3_OOP.ViewModels
 
         private void UpdateFinancialAgents()
         {
-
             // Очищаем существующие коллекции
-            var citizens = FinancialOverview.GetCitizens() as ObservableCollection<Citizen>;
-            var companies = FinancialOverview.GetCompanies() as ObservableCollection<Company>;
-
-            citizens?.Clear();
-            companies?.Clear();
+            _citizens?.Clear();
+            _companies?.Clear();
 
             // Создаем граждан для финансовой системы
             foreach (var human in PopulationManager.Population.Where(h => h.IsAlive))
@@ -393,7 +394,7 @@ namespace GigaCity_Labor3_OOP.ViewModels
                 {
                     Salary = CalculateSalary(human)
                 };
-                citizens?.Add(citizen);
+                _citizens?.Add(citizen);
             }
 
             // Создаем компании (учебные заведения как компании)
@@ -402,12 +403,12 @@ namespace GigaCity_Labor3_OOP.ViewModels
                 Revenue = CalculateUniversityRevenue(),
                 Costs = CalculateUniversityCosts()
             };
-            companies?.Add(universityCompany);
+            _companies?.Add(universityCompany);
 
             // Добавляем сотрудников в компанию
             foreach (var employee in PopulationManager.University.GetAllEmployees())
             {
-                var citizenEmployee = citizens?.FirstOrDefault(c => c.Name == employee._name);
+                var citizenEmployee = _citizens?.FirstOrDefault(c => c.Name == employee._name);
                 if (citizenEmployee != null)
                 {
                     citizenEmployee.Employer = universityCompany;
@@ -464,10 +465,20 @@ namespace GigaCity_Labor3_OOP.ViewModels
                 UpdateFinancialAgents();
 
                 // Автоматически собираем налоги и выплачиваем зарплаты/субсидии
-                FinancialOverview.CollectTaxesCommand.Execute(null);
-
-                // Собираем налоги
                 FinancialOverview.CollectTaxes();
+                
+                // Обновляем симуляции энергетики и коммуникаций
+                if (_energyService != null)
+                {
+                    _energyService.SimulateStep();
+                }
+                if (_commsService != null)
+                {
+                    _commsService.SimulateStep();
+                }
+                
+                // Уведомляем об обновлении tooltip
+                OnPropertyChanged(nameof(Map));
 
                 OnPropertyChanged(nameof(EmployeesStats));
             }
@@ -479,11 +490,24 @@ namespace GigaCity_Labor3_OOP.ViewModels
             OnPropertyChanged(nameof(Population));
             OnPropertyChanged(nameof(UniversityStats));
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        
+        public void InitializeEnergyService(EnergyModel.EnergySimulationService service)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            _energyService = service;
+        }
+        
+        public void InitializeCommsService(CommsModel.CommunicationsSimulationService service)
+        {
+            _commsService = service;
+        }
+        
+        public EnergyModel.EnergySimulationService? GetEnergyService() => _energyService;
+        public CommsModel.CommunicationsSimulationService? GetCommsService() => _commsService;
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName ?? string.Empty));
         }
     }
 }

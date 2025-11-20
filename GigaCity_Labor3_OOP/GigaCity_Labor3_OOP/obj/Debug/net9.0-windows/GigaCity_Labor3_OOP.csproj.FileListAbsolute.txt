@@ -227,3 +227,15 @@ E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\n
 E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
 E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.genruntimeconfig.cache
 E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\ref\GigaCity_Labor3_OOP.dll
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CommsModel.deps.json
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CommsModel.runtimeconfig.json
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CommsModel.exe
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\EnergyModel.deps.json
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\EnergyModel.runtimeconfig.json
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\EnergyModel.exe
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CommsModel.dll
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\EnergyModel.dll
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\IGigacityContracts.dll
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\IGigacityContracts.pdb
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CommsModel.pdb
+E:\3 лаба\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\EnergyModel.pdb

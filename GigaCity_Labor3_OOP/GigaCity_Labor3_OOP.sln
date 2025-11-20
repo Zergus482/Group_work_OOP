@@ -1,15 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigaCity_Labor3_OOP", "GigaCity_Labor3_OOP\GigaCity_Labor3_OOP.csproj", "{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3A6218E2-F0EB-34AE-F260-55187C2767BB} = {3A6218E2-F0EB-34AE-F260-55187C2767BB}
+		{8D703BA7-415A-7B70-1138-716A112FCF48} = {8D703BA7-415A-7B70-1138-716A112FCF48}
+		{A3D3608E-7ED4-C638-885D-E2A9E3995DB5} = {A3D3608E-7ED4-C638-885D-E2A9E3995DB5}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitySimulation", "..\city-simulation-project-master\CitySimulation\CitySimulation.csproj", "{D6239F56-D3A8-C148-9E7D-C2708759C059}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityFinance.ViewModels", "..\Финансовая система\CityFinance.ViewModels\CityFinance.ViewModels.csproj", "{9BBE737C-2E72-A7CB-A176-561C9FFEB4A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFinancialSystem", "..\Финансовая система\TheFinancialSystem\TheFinancialSystem\TheFinancialSystem.csproj", "{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGigacityContracts", "..\IGigacityContracts\IGigacityContracts.csproj", "{A3D3608E-7ED4-C638-885D-E2A9E3995DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommsModel", "..\CommsModel\CommsModel.csproj", "{3A6218E2-F0EB-34AE-F260-55187C2767BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyModel", "..\EnergyModel\EnergyModel.csproj", "{8D703BA7-415A-7B70-1138-716A112FCF48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +44,18 @@ Global
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F15D719-D6E6-72DD-4292-7F8B9989DDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D3608E-7ED4-C638-885D-E2A9E3995DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D3608E-7ED4-C638-885D-E2A9E3995DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D3608E-7ED4-C638-885D-E2A9E3995DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D3608E-7ED4-C638-885D-E2A9E3995DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6218E2-F0EB-34AE-F260-55187C2767BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6218E2-F0EB-34AE-F260-55187C2767BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6218E2-F0EB-34AE-F260-55187C2767BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6218E2-F0EB-34AE-F260-55187C2767BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D703BA7-415A-7B70-1138-716A112FCF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D703BA7-415A-7B70-1138-716A112FCF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D703BA7-415A-7B70-1138-716A112FCF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D703BA7-415A-7B70-1138-716A112FCF48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

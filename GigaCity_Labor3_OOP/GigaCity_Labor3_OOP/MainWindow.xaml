@@ -14,6 +14,7 @@
 
         <!-- Информационный столбец -->
         <Border Grid.Column="0" Background="#404040" BorderBrush="#555555" BorderThickness="0,0,1,0">
+
             <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="12">
                 <StackPanel>
                     <TextBlock Text="Информация о ячейке" 
@@ -41,6 +42,7 @@
                                       Margin="0,3,0,0"/>
                         </StackPanel>
                     </Border>
+                    
                     <Border Background="#5F2F2F" BorderBrush="#7F4F4F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
                         <StackPanel>
                             <TextBlock Text="Инструменты" 
@@ -48,7 +50,40 @@
                                        FontSize="14" 
                                        Foreground="White" 
                                        Margin="0,0,0,8"/>
-
+                            <Button x:Name="OpenEnergyModule" 
+                                Content="Открыть Энергетическую систему" 
+                                Click="OpenEnergyModule_Click"
+                                Background="#3F7F5F" 
+                                Foreground="White"
+                                BorderBrush="#4F8F6F"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                ToolTip="Открыть окно управления энергетикой"
+                                Margin="0,0,0,5"/>
+                            <CheckBox x:Name="ShowEnergyOverlay" 
+                                     Content="Показать энергетику на карте" 
+                                     Margin="4,0,4,5" 
+                                     Foreground="White"
+                                     Checked="ShowEnergyOverlay_Checked"
+                                     Unchecked="ShowEnergyOverlay_Unchecked"/>
+                            <Button x:Name="OpenCommsModule" 
+                                Content="Открыть Коммуникационную систему" 
+                                Click="OpenCommsModule_Click"
+                                Background="#3F7F5F" 
+                                Foreground="White"
+                                BorderBrush="#4F8F6F"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                ToolTip="Открыть окно управления коммуникациями"
+                                Margin="0,5,0,5"/>
+                            <CheckBox x:Name="ShowCommsOverlay" 
+                                     Content="Показать коммуникации на карте" 
+                                     Margin="4,0,4,5" 
+                                     Foreground="White"
+                                     Checked="ShowCommsOverlay_Checked"
+                                     Unchecked="ShowCommsOverlay_Unchecked"/>
                             <Button x:Name="OpenThirdAppButton" 
                                 Content="Открыть финансовую систему" 
                                 Click="OpenThirdAppButton_Click"

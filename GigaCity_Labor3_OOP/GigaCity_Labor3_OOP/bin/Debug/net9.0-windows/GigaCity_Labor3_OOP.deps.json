@@ -10,6 +10,9 @@
         "dependencies": {
           "CityFinance.ViewModels": "1.0.0",
           "CitySimulation": "1.0.0",
+          "CommsModel": "1.0.0",
+          "EnergyModel": "1.0.0",
+          "IGigacityContracts": "1.0.0",
           "TheFinancialSystem": "1.0.0"
         },
         "runtime": {
@@ -30,6 +33,36 @@
       "CitySimulation/1.0.0": {
         "runtime": {
           "CitySimulation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommsModel/1.0.0": {
+        "dependencies": {
+          "IGigacityContracts": "1.0.0"
+        },
+        "runtime": {
+          "CommsModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "EnergyModel/1.0.0": {
+        "dependencies": {
+          "IGigacityContracts": "1.0.0"
+        },
+        "runtime": {
+          "EnergyModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "IGigacityContracts/1.0.0": {
+        "runtime": {
+          "IGigacityContracts.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -57,6 +90,21 @@
       "sha512": ""
     },
     "CitySimulation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommsModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EnergyModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IGigacityContracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
