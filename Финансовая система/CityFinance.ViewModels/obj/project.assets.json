@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Шалом\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\CitySimulation1\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
       "projectName": "CityFinance.ViewModels",
-      "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
-      "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-      "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\CitySimulation1\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\CitySimulation1\\Group_work_OOP\\Финансовая система\\CityFinance.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Шалом\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -52,15 +52,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
-              "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
+            "C:\\Users\\user\\Desktop\\CitySimulation1\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\CitySimulation1\\Group_work_OOP\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
             }
           }
         }
@@ -75,7 +74,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -96,7 +95,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -188,3 +188,81 @@ A:\Проекты по ООП\для репозитория\Group_work\GigaCity_
 A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.g.cs
 A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
 A:\Проекты по ООП\для репозитория\Group_work\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.lref
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\FinancialWindow.baml
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.baml
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.baml
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\FinancialWindow.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.cache
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.lref
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\refint\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.deps.json
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.runtimeconfig.json
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.exe
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.exe
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.deps.json
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.runtimeconfig.json
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.pdb
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CityFinance.ViewModels.pdb
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\TheFinancialSystem.pdb
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.g.resources
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.AssemblyInfo.cs
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.sourcelink.json
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity.8BE77708.Up2Date
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.genruntimeconfig.cache
+C:\Users\user\Desktop\Новая папка\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\ref\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.deps.json
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.runtimeconfig.json
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.exe
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.exe
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.deps.json
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.runtimeconfig.json
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CityFinance.ViewModels.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\TheFinancialSystem.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CitySimulation.pdb
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\CityFinance.ViewModels.pdb
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\bin\Debug\net9.0-windows\TheFinancialSystem.pdb
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\FinancialWindow.baml
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.baml
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.baml
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\FinancialWindow.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\CellInfoView.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\Views\TrafficManagementView.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.cache
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP_MarkupCompile.lref
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.g.resources
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.AssemblyInfo.cs
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.sourcelink.json
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity.8BE77708.Up2Date
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\refint\GigaCity_Labor3_OOP.dll
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.pdb
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\GigaCity_Labor3_OOP.genruntimeconfig.cache
+C:\Users\user\Desktop\CitySimulation1\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\ref\GigaCity_Labor3_OOP.dll

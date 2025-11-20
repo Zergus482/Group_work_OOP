@@ -4,16 +4,23 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Windows.Threading;
 using GigaCity_Labor3_OOP.Models;
+using GigaCity_Labor3_OOP.Models.Economy;
 using GigaCity_Labor3_OOP.ViewModels;
+using GigaCity_Labor3_OOP.ViewModels.Economy;
 using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
 using System.Linq;
 using GigaCity_Labor3_OOP.Views;
+using System.IO;
+using System.Text.Json;
+using Microsoft.Win32;
 
 namespace GigaCity_Labor3_OOP
 {
@@ -23,6 +30,9 @@ namespace GigaCity_Labor3_OOP
 
         private Point _lastMousePosition;
         private bool _isPanning = false;
+        private EconomyFacilityViewModel? _draggedFacility;
+        private Point _dragStartPoint;
+        private const double GridCellSize = 15;
 
         // Цвета для типов местности
         private readonly Dictionary<byte, Color> _terrainColors = new Dictionary<byte, Color>
@@ -97,15 +107,16 @@ namespace GigaCity_Labor3_OOP
                 {
                     Color fillColor;
 
-                    if (ViewModel.Map.IsRoad(cell.X, cell.Y))
+                    // ИСПРАВЛЕНИЕ: Координаты в клетках поменяны местами, поэтому при проверке тоже меняем местами
+                    if (ViewModel.Map.IsRoad(cell.Y, cell.X))
                     {
                         fillColor = _roadColor;
                     }
-                    else if (ViewModel.Map.IsPark(cell.X, cell.Y))
+                    else if (ViewModel.Map.IsPark(cell.Y, cell.X))
                     {
                         fillColor = _parkColor;
                     }
-                    else if (ViewModel.Map.IsBikePath(cell.X, cell.Y))
+                    else if (ViewModel.Map.IsBikePath(cell.Y, cell.X))
                     {
                         fillColor = _bikePathColor;
                     }
@@ -147,15 +158,16 @@ namespace GigaCity_Labor3_OOP
 
                 // Обновляем подсказку
                 string tooltip = cell.ToolTip;
-                if (ViewModel.Map.IsPark(cell.X, cell.Y))
+                // ИСПРАВЛЕНИЕ: Координаты в клетках поменяны местами
+                if (ViewModel.Map.IsPark(cell.Y, cell.X))
                 {
                     tooltip += "\nЗона: Парк";
                 }
-                else if (ViewModel.Map.IsBikePath(cell.X, cell.Y))
+                else if (ViewModel.Map.IsBikePath(cell.Y, cell.X))
                 {
                     tooltip += "\nЗона: Велодорожка";
                 }
-                else if (ViewModel.Map.IsRoad(cell.X, cell.Y))
+                else if (ViewModel.Map.IsRoad(cell.Y, cell.X))
                 {
                     tooltip += "\nЗона: Дорога";
                 }
@@ -258,9 +270,9 @@ namespace GigaCity_Labor3_OOP
                 MessageBox.Show($"Не удалось запустить приложение: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-        private void MapScrollViewer_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        private void MapScrollViewer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.RightButton == MouseButtonState.Pressed)
+            if (e.MiddleButton == MouseButtonState.Pressed)
             {
                 _isPanning = true;
                 _lastMousePosition = e.GetPosition(MapScrollViewer);
@@ -270,7 +282,7 @@ namespace GigaCity_Labor3_OOP
             }
         }
 
-        private void MapScrollViewer_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        private void MapScrollViewer_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
             if (_isPanning)
             {
@@ -283,7 +295,7 @@ namespace GigaCity_Labor3_OOP
 
         private void MapScrollViewer_PreviewMouseMove(object sender, MouseEventArgs e)
         {
-            if (_isPanning && e.RightButton == MouseButtonState.Pressed)
+            if (_isPanning && e.MiddleButton == MouseButtonState.Pressed)
             {
                 Point currentPosition = e.GetPosition(MapScrollViewer);
                 Vector delta = currentPosition - _lastMousePosition;
@@ -295,6 +307,538 @@ namespace GigaCity_Labor3_OOP
                 e.Handled = true;
             }
         }
+        private void MapCanvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var point = e.GetPosition(MapCanvas);
+            var gridPoint = CanvasToGrid(point);
+            System.Diagnostics.Debug.WriteLine($"ПКМ на карте: Canvas=({point.X:F1}, {point.Y:F1}), Grid=({gridPoint.X}, {gridPoint.Y})");
+            
+            // Проверяем, какая клетка находится под курсором через HitTest
+            var hitTestResult = VisualTreeHelper.HitTest(MapCanvas, point);
+            DependencyObject current = hitTestResult?.VisualHit as DependencyObject;
+            
+            CellViewModel foundCell = null;
+            while (current != null)
+            {
+                if (current is Rectangle rect && rect.DataContext is CellViewModel cell)
+                {
+                    foundCell = cell;
+                    break;
+                }
+                current = VisualTreeHelper.GetParent(current);
+            }
+            
+            if (foundCell != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"  Под курсором найдена клетка [{foundCell.X}, {foundCell.Y}]");
+                // Теперь координаты в клетках уже поменяны местами, используем их напрямую
+                ViewModel.EconomySimulation.SetPlacementCell(foundCell.X, foundCell.Y);
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"  Клетка не найдена через HitTest, используем преобразованные координаты");
+                ViewModel.EconomySimulation.SetPlacementCell((int)gridPoint.X, (int)gridPoint.Y);
+            }
+        }
+
+        private void MapCanvas_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+            // Если идет панорамирование, блокируем контекстное меню
+            if (_isPanning)
+            {
+                e.Handled = true;
+                return;
+            }
+            
+            // Убеждаемся, что координаты установлены
+            var point = Mouse.GetPosition(MapCanvas);
+            var gridPoint = CanvasToGrid(point);
+            System.Diagnostics.Debug.WriteLine($"ContextMenuOpening: Canvas=({point.X:F1}, {point.Y:F1}), Grid=({gridPoint.X}, {gridPoint.Y})");
+            
+            // Пробуем найти клетку под курсором
+            var hitTestResult = VisualTreeHelper.HitTest(MapCanvas, point);
+            DependencyObject current = hitTestResult?.VisualHit as DependencyObject;
+            
+            CellViewModel foundCell = null;
+            while (current != null)
+            {
+                if (current is Rectangle rect && rect.DataContext is CellViewModel cell)
+                {
+                    foundCell = cell;
+                    break;
+                }
+                current = VisualTreeHelper.GetParent(current);
+            }
+            
+            if (foundCell != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"  В ContextMenuOpening найдена клетка [{foundCell.X}, {foundCell.Y}]");
+                // Теперь координаты в клетках уже поменяны местами, используем их напрямую
+                ViewModel.EconomySimulation.SetPlacementCell(foundCell.X, foundCell.Y);
+            }
+            else
+            {
+                ViewModel.EconomySimulation.SetPlacementCell((int)gridPoint.X, (int)gridPoint.Y);
+            }
+        }
+
+        private Point CanvasToGrid(Point point)
+        {
+            // Теперь координаты в клетках уже поменяны местами при создании (X=y, Y=x)
+            // UniformGrid с Columns=100 размещает элементы в порядке их добавления
+            // Поэтому: point.X / 15 = x (колонка), point.Y / 15 = y (строка)
+            // Но в клетках X=y, Y=x, поэтому gridX = point.X / 15, gridY = point.Y / 15
+            int x = Math.Clamp((int)(point.X / GridCellSize), 0, ViewModel.Map.Width - 1);
+            int y = Math.Clamp((int)(point.Y / GridCellSize), 0, ViewModel.Map.Height - 1);
+            System.Diagnostics.Debug.WriteLine($"CanvasToGrid: Canvas=({point.X:F1}, {point.Y:F1}) -> Grid=({x}, {y})");
+            return new Point(x, y);
+        }
+
+        private void Facility_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is EconomyFacilityViewModel facility)
+            {
+                // Если это логистический центр - открываем окно с ресурсами
+                if (facility.IsLogisticsHub)
+                {
+                    e.Handled = true;
+                    OpenLogisticsHubWindow(facility);
+                    return;
+                }
+
+                // Для остальных объектов - обычное перетаскивание
+                if (facility.IsDraggable)
+                {
+                    _draggedFacility = facility;
+                    _dragStartPoint = e.GetPosition(MapCanvas);
+                    button.CaptureMouse();
+                }
+            }
+        }
+
+        private void Facility_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is EconomyFacilityViewModel facility)
+            {
+                // Выбираем объект для удаления
+                ViewModel.EconomySimulation.SelectedFacility = facility;
+                e.Handled = false; // Разрешаем показать контекстное меню
+            }
+        }
+
+        private void OpenLogisticsHubWindow(EconomyFacilityViewModel hub)
+        {
+            var window = new Window
+            {
+                Title = $"Логистический центр: {hub.Name}",
+                Width = 650,
+                Height = 600,
+                WindowStartupLocation = WindowStartupLocation.CenterOwner,
+                Owner = this,
+                Background = new SolidColorBrush(Color.FromRgb(40, 40, 40))
+            };
+            
+            // Таймер для обновления данных в реальном времени
+            var updateTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+
+            var scrollViewer = new ScrollViewer
+            {
+                VerticalScrollBarVisibility = ScrollBarVisibility.Auto,
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled
+            };
+
+            var stackPanel = new StackPanel { Margin = new Thickness(15) };
+            
+            var title = new TextBlock
+            {
+                Text = $"📦 {hub.Name}",
+                FontSize = 18,
+                FontWeight = FontWeights.Bold,
+                Foreground = Brushes.White,
+                Margin = new Thickness(0, 0, 0, 15)
+            };
+            stackPanel.Children.Add(title);
+
+            var info = new TextBlock
+            {
+                Text = $"Запасы: {hub.Storage:0.#}/{hub.Capacity:0.#} т",
+                FontSize = 14,
+                Foreground = Brushes.LightGray,
+                Margin = new Thickness(0, 0, 0, 15)
+            };
+            stackPanel.Children.Add(info);
+
+            // Показываем статистику ресурсов из ResourceStats
+            var statsLabel = new TextBlock
+            {
+                Text = "Статистика ресурсов:",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Foreground = Brushes.White,
+                Margin = new Thickness(0, 0, 0, 10)
+            };
+            stackPanel.Children.Add(statsLabel);
+
+            var statsPanel = new StackPanel { Margin = new Thickness(0, 0, 0, 15) };
+            foreach (var stat in ViewModel.EconomySimulation.ResourceStats)
+            {
+                var statBorder = new Border
+                {
+                    Background = new SolidColorBrush(Color.FromRgb(43, 43, 43)),
+                    Padding = new Thickness(8),
+                    CornerRadius = new CornerRadius(4),
+                    Margin = new Thickness(0, 0, 0, 6)
+                };
+                
+                var statStack = new StackPanel();
+                var statName = new TextBlock
+                {
+                    Text = stat.DisplayName,
+                    FontWeight = FontWeights.Bold,
+                    Foreground = Brushes.White,
+                    FontSize = 12
+                };
+                statStack.Children.Add(statName);
+                
+                var statValue = new TextBlock
+                {
+                    Text = stat.TotalStockText,
+                    Foreground = Brushes.LightGray,
+                    FontSize = 11
+                };
+                statStack.Children.Add(statValue);
+                
+                var statTrend = new TextBlock
+                {
+                    Text = stat.TrendText,
+                    Foreground = new SolidColorBrush(stat.Trend > 0 ? Colors.LightGreen : (stat.Trend < 0 ? Colors.LightCoral : Colors.LightGray)),
+                    FontSize = 10
+                };
+                statStack.Children.Add(statTrend);
+                
+                statBorder.Child = statStack;
+                statsPanel.Children.Add(statBorder);
+            }
+            stackPanel.Children.Add(statsPanel);
+
+            // Показываем управление производством готовой продукции
+            var productionLabel = new TextBlock
+            {
+                Text = "Управление производством:",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Foreground = Brushes.White,
+                Margin = new Thickness(0, 0, 0, 10)
+            };
+            stackPanel.Children.Add(productionLabel);
+
+            // Получаем все типы продукции, которые могут быть произведены
+            var productTypes = new Dictionary<ProductType, string>
+            {
+                { ProductType.Steel, "Сталь" },
+                { ProductType.EngineeredWood, "Доски" },
+                { ProductType.Fuel, "Топливо" },
+                { ProductType.Chemicals, "Химикаты" },
+                { ProductType.Conductors, "Провода" },
+                { ProductType.Coolant, "Охладитель" }
+            };
+
+            var productionPanel = new StackPanel { Margin = new Thickness(0, 0, 0, 15) };
+            bool hasAnyProduction = false;
+
+            foreach (var productKvp in productTypes)
+            {
+                var productType = productKvp.Key;
+                var productName = productKvp.Value;
+                
+                // Находим все объекты, производящие этот тип продукции
+                var producingFacilities = ViewModel.EconomySimulation.Facilities
+                    .Where(f => f.Blueprint?.Stage == ProcessingStage.Manufacturing &&
+                                ViewModel.EconomySimulation.ConvertProduct(f.Blueprint.Resource) == productType)
+                    .ToList();
+
+                if (producingFacilities.Count == 0) continue;
+                
+                hasAnyProduction = true;
+                
+                // Получаем общее количество произведенной продукции
+                double totalProduced = ViewModel.EconomySimulation.GetProducedProduct(productType);
+                bool isAnyActive = producingFacilities.Any(f => f.IsActive);
+
+                var productBorder = new Border
+                {
+                    Background = new SolidColorBrush(Color.FromRgb(43, 43, 43)),
+                    Padding = new Thickness(10),
+                    CornerRadius = new CornerRadius(4),
+                    Margin = new Thickness(0, 0, 0, 8)
+                };
+
+                var productGrid = new Grid();
+                productGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+                productGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+
+                var productInfo = new StackPanel();
+                var productNameText = new TextBlock
+                {
+                    Text = productName,
+                    FontWeight = FontWeights.Bold,
+                    Foreground = Brushes.White,
+                    FontSize = 12
+                };
+                productInfo.Children.Add(productNameText);
+
+                var productStatus = new TextBlock
+                {
+                    Text = isAnyActive ? "🟢 Производится" : "🔴 Остановлено",
+                    Foreground = isAnyActive ? Brushes.LightGreen : Brushes.LightCoral,
+                    FontSize = 11,
+                    Margin = new Thickness(0, 2, 0, 0)
+                };
+                productInfo.Children.Add(productStatus);
+
+                var productAmount = new TextBlock
+                {
+                    Text = $"Произведено: {totalProduced:0.#} т",
+                    Foreground = Brushes.LightGray,
+                    FontSize = 10,
+                    Margin = new Thickness(0, 2, 0, 0)
+                };
+                productInfo.Children.Add(productAmount);
+                
+                // Проверяем наличие ресурсов для производства
+                var resourceCheck = ViewModel.EconomySimulation.CheckProductionResources(productType, hub);
+                if (!string.IsNullOrEmpty(resourceCheck))
+                {
+                    var resourceWarning = new TextBlock
+                    {
+                        Text = $"⚠️ {resourceCheck}",
+                        Foreground = Brushes.Orange,
+                        FontSize = 9,
+                        Margin = new Thickness(0, 2, 0, 0),
+                        TextWrapping = TextWrapping.Wrap
+                    };
+                    productInfo.Children.Add(resourceWarning);
+                }
+                
+                // Обновляем данные в реальном времени
+                var productTypeRef = productType;
+                var amountRef = productAmount;
+                var statusRef = productStatus;
+                var hubRef = hub;
+                var productInfoRef = productInfo;
+                updateTimer.Tick += (s, e) =>
+                {
+                    if (amountRef != null && statusRef != null && productInfoRef != null)
+                    {
+                        var currentProduced = ViewModel.EconomySimulation.GetProducedProduct(productTypeRef);
+                        var currentFacilities = ViewModel.EconomySimulation.Facilities
+                            .Where(f => f.Blueprint?.Stage == ProcessingStage.Manufacturing &&
+                                        ViewModel.EconomySimulation.ConvertProduct(f.Blueprint.Resource) == productTypeRef)
+                            .ToList();
+                        bool currentActive = currentFacilities.Any(f => f.IsActive);
+                        
+                        amountRef.Text = $"Произведено: {currentProduced:0.#} т";
+                        statusRef.Text = currentActive ? "🟢 Производится" : "🔴 Остановлено";
+                        statusRef.Foreground = currentActive ? Brushes.LightGreen : Brushes.LightCoral;
+                        
+                        // Обновляем предупреждение о ресурсах
+                        // Удаляем старое предупреждение, если есть
+                        var oldWarning = productInfoRef.Children.OfType<TextBlock>()
+                            .FirstOrDefault(tb => tb.Foreground == Brushes.Orange && tb.Text.StartsWith("⚠️"));
+                        if (oldWarning != null)
+                        {
+                            productInfoRef.Children.Remove(oldWarning);
+                        }
+                        
+                        // Добавляем новое предупреждение, если нужно
+                        var resourceCheck = ViewModel.EconomySimulation.CheckProductionResources(productTypeRef, hubRef);
+                        if (!string.IsNullOrEmpty(resourceCheck))
+                        {
+                            var resourceWarning = new TextBlock
+                            {
+                                Text = $"⚠️ {resourceCheck}",
+                                Foreground = Brushes.Orange,
+                                FontSize = 9,
+                                Margin = new Thickness(0, 2, 0, 0),
+                                TextWrapping = TextWrapping.Wrap
+                            };
+                            productInfoRef.Children.Add(resourceWarning);
+                        }
+                    }
+                };
+
+                Grid.SetColumn(productInfo, 0);
+                productGrid.Children.Add(productInfo);
+
+                var toggleButton = new Button
+                {
+                    Content = isAnyActive ? "⏸ Остановить" : "▶ Запустить",
+                    Width = 120,
+                    Height = 30,
+                    Margin = new Thickness(5, 0, 5, 0),
+                    Background = isAnyActive 
+                        ? new SolidColorBrush(Color.FromRgb(200, 100, 100)) 
+                        : new SolidColorBrush(Color.FromRgb(100, 200, 100)),
+                    Foreground = Brushes.White,
+                    FontSize = 11
+                };
+                toggleButton.Click += (s, e) =>
+                {
+                    ViewModel.EconomySimulation.ToggleProductProductionCommand.Execute(productType);
+                    var updatedFacilities = ViewModel.EconomySimulation.Facilities
+                        .Where(f => f.Blueprint?.Stage == ProcessingStage.Manufacturing &&
+                                    ViewModel.EconomySimulation.ConvertProduct(f.Blueprint.Resource) == productType)
+                        .ToList();
+                    bool newState = updatedFacilities.Any(f => f.IsActive);
+                    
+                    toggleButton.Content = newState ? "⏸ Остановить" : "▶ Запустить";
+                    toggleButton.Background = newState 
+                        ? new SolidColorBrush(Color.FromRgb(200, 100, 100)) 
+                        : new SolidColorBrush(Color.FromRgb(100, 200, 100));
+                    productStatus.Text = newState ? "🟢 Производится" : "🔴 Остановлено";
+                    productStatus.Foreground = newState ? Brushes.LightGreen : Brushes.LightCoral;
+                };
+                Grid.SetColumn(toggleButton, 1);
+                productGrid.Children.Add(toggleButton);
+
+                productBorder.Child = productGrid;
+                productionPanel.Children.Add(productBorder);
+            }
+
+            if (!hasAnyProduction)
+            {
+                var noProduction = new TextBlock
+                {
+                    Text = "Нет производственных объектов",
+                    FontSize = 12,
+                    Foreground = Brushes.LightGray,
+                    Margin = new Thickness(0, 0, 0, 15)
+                };
+                stackPanel.Children.Add(noProduction);
+            }
+            else
+            {
+                stackPanel.Children.Add(productionPanel);
+            }
+
+            // Показываем информацию о потоках
+            var flowsLabel = new TextBlock
+            {
+                Text = "Активные потоки:",
+                FontSize = 14,
+                FontWeight = FontWeights.Bold,
+                Foreground = Brushes.White,
+                Margin = new Thickness(0, 0, 0, 10)
+            };
+            stackPanel.Children.Add(flowsLabel);
+
+            var flowsText = new TextBlock
+            {
+                Text = GetHubResourcesText(hub),
+                FontSize = 12,
+                Foreground = Brushes.White,
+                TextWrapping = TextWrapping.Wrap,
+                Margin = new Thickness(0, 0, 0, 15)
+            };
+            stackPanel.Children.Add(flowsText);
+            
+            // Обновляем отображение ресурсов в реальном времени
+            var flowsTextRef = flowsText;
+            var hubForResources = hub;
+            updateTimer.Tick += (s, e) =>
+            {
+                if (flowsTextRef != null && hubForResources != null)
+                {
+                    flowsTextRef.Text = GetHubResourcesText(hubForResources);
+                }
+            };
+
+            var closeButton = new Button
+            {
+                Content = "Закрыть",
+                Width = 100,
+                Height = 30,
+                Margin = new Thickness(0, 10, 0, 0),
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
+            closeButton.Click += (s, e) => window.Close();
+            stackPanel.Children.Add(closeButton);
+
+            scrollViewer.Content = stackPanel;
+            window.Content = scrollViewer;
+            
+            // Запускаем таймер обновления
+            updateTimer.Start();
+            
+            // Останавливаем таймер при закрытии окна
+            window.Closed += (s, e) => updateTimer.Stop();
+            
+            window.ShowDialog();
+        }
+
+        private string GetHubResourcesText(EconomyFacilityViewModel hub)
+        {
+            // Получаем ресурсы по типам из логистического центра
+            var hubResources = ViewModel.EconomySimulation.GetHubResources(hub);
+            
+            if (hubResources.Count == 0)
+            {
+                return "Ресурсы в хранилище:\n• Ресурсы еще не доставлены";
+            }
+            
+            var result = "Ресурсы в хранилище:\n";
+            
+            // Показываем ресурсы по типам
+            foreach (var kvp in hubResources.OrderBy(r => r.Key.ToString()))
+            {
+                var resourceName = kvp.Key switch
+                {
+                    CoreResource.Wood => "Древесина",
+                    CoreResource.Iron => "Железо",
+                    CoreResource.Copper => "Медь",
+                    CoreResource.Oil => "Нефть",
+                    CoreResource.Coal => "Уголь",
+                    CoreResource.Water => "Вода",
+                    _ => kvp.Key.ToString()
+                };
+                result += $"• {resourceName}: {kvp.Value:0.#} т\n";
+            }
+            
+            return result;
+        }
+
+        private void Facility_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_draggedFacility == null || e.LeftButton != MouseButtonState.Pressed) return;
+
+            var current = e.GetPosition(MapCanvas);
+            if ((current - _dragStartPoint).Length < 5) return;
+
+            var gridPoint = CanvasToGrid(current);
+            var success = ViewModel.EconomySimulation.MoveFacility(_draggedFacility, (int)gridPoint.X, (int)gridPoint.Y);
+            if (!success)
+            {
+                // Если перемещение не удалось, отменяем перетаскивание
+                if (sender is Button button)
+                {
+                    button.ReleaseMouseCapture();
+                }
+                _draggedFacility = null;
+            }
+        }
+
+        private void Facility_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Button button)
+            {
+                button.ReleaseMouseCapture();
+            }
+            _draggedFacility = null;
+        }
+
 
         #endregion
 
@@ -302,6 +846,10 @@ namespace GigaCity_Labor3_OOP
         {
             if (sender is Rectangle rectangle && rectangle.DataContext is CellViewModel cell)
             {
+                // Отладка: проверяем координаты клетки и позицию мыши
+                var mousePos = e.GetPosition(MapCanvas);
+                var gridPos = CanvasToGrid(mousePos);
+                System.Diagnostics.Debug.WriteLine($"Rectangle_MouseEnter: клетка в DataContext=[{cell.X}, {cell.Y}], мышь Canvas=({mousePos.X:F1}, {mousePos.Y:F1}), Grid=({gridPos.X}, {gridPos.Y})");
                 ViewModel.SelectedCell = cell;
                 ViewModel.UpdateCellInfo(cell);
             }
@@ -508,6 +1056,117 @@ namespace GigaCity_Labor3_OOP
         private void CellInfoView_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void SaveGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            var saveDialog = new SaveFileDialog
+            {
+                Filter = "JSON файлы (*.json)|*.json|Все файлы (*.*)|*.*",
+                FileName = "game_save.json",
+                DefaultExt = "json"
+            };
+
+            if (saveDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    var saveData = new
+                    {
+                        Facilities = ViewModel.EconomySimulation.Facilities.Select(f => new
+                        {
+                            BlueprintId = f.Blueprint?.Id,
+                            GridX = f.GridX,
+                            GridY = f.GridY,
+                            Storage = f.Storage,
+                            IsActive = f.IsActive,
+                            IsDraggable = f.IsDraggable
+                        }).ToList(),
+                        TotalProduction = ViewModel.EconomySimulation.TotalProduction,
+                        EconomicIndicator = ViewModel.EconomySimulation.EconomicIndicator
+                    };
+
+                    var json = JsonSerializer.Serialize(saveData, new JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(saveDialog.FileName, json);
+                    
+                    MessageBox.Show("Игра успешно сохранена!", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void LoadGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            var openDialog = new OpenFileDialog
+            {
+                Filter = "JSON файлы (*.json)|*.json|Все файлы (*.*)|*.*",
+                DefaultExt = "json"
+            };
+
+            if (openDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    var json = File.ReadAllText(openDialog.FileName);
+                    var saveData = JsonSerializer.Deserialize<JsonElement>(json);
+
+                    // Очищаем текущие объекты (кроме логистического центра)
+                    var hub = ViewModel.EconomySimulation.Facilities.FirstOrDefault(f => f.IsLogisticsHub);
+                    ViewModel.EconomySimulation.Facilities.Clear();
+                    if (hub != null)
+                    {
+                        ViewModel.EconomySimulation.Facilities.Add(hub);
+                    }
+
+                    // Загружаем объекты
+                    if (saveData.TryGetProperty("Facilities", out var facilitiesElement))
+                    {
+                        foreach (var facilityElement in facilitiesElement.EnumerateArray())
+                        {
+                            if (facilityElement.TryGetProperty("BlueprintId", out var blueprintIdElement))
+                            {
+                                var blueprintId = blueprintIdElement.GetString();
+                                if (!string.IsNullOrEmpty(blueprintId) && blueprintId != "logistics-hub")
+                                {
+                                    var gridX = facilityElement.TryGetProperty("GridX", out var x) ? (int)x.GetDouble() : 0;
+                                    var gridY = facilityElement.TryGetProperty("GridY", out var y) ? (int)y.GetDouble() : 0;
+                                    
+                                    var result = ViewModel.EconomySimulation.TryPlaceBuilding(blueprintId, gridX, gridY);
+                                    if (result)
+                                    {
+                                        var facility = ViewModel.EconomySimulation.Facilities.LastOrDefault();
+                                        if (facility != null)
+                                        {
+                                            if (facilityElement.TryGetProperty("Storage", out var storage))
+                                            {
+                                                facility.UpdateState(facility.CurrentProduction, storage.GetDouble(), facility.State, facility.Utilization);
+                                            }
+                                            if (facilityElement.TryGetProperty("IsActive", out var isActive))
+                                            {
+                                                facility.IsActive = isActive.GetBoolean();
+                                            }
+                                            if (facilityElement.TryGetProperty("IsDraggable", out var isDraggable))
+                                            {
+                                                facility.IsDraggable = isDraggable.GetBoolean();
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ViewModel.EconomySimulation.RebuildNetwork();
+                    MessageBox.Show("Игра успешно загружена!", "Загрузка", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при загрузке: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }
