@@ -67,10 +67,10 @@
                                         <TextBlock Text="{Binding Type, StringFormat='Тип: {0}'}" FontSize="13" FontWeight="Bold" Foreground="Orange" Margin="0,0,0,5"/>
                                         <TextBlock Text="{Binding Severity, StringFormat='Серьезность: {0:F1}%'}" FontSize="12" Foreground="Red" Margin="0,0,0,5"/>
                                         <TextBlock Text="{Binding ReportedAt, StringFormat='Время: {0:HH:mm:ss}'}" FontSize="11" Foreground="LightGray" Margin="0,0,0,5"/>
-                                        <TextBlock Text="{Binding IsActive, StringFormat='Активно: {0}'}" FontSize="11" Foreground="{Binding IsActive, Converter={StaticResource BooleanToColorConverter}}" Margin="0,0,0,5">
+                                        <TextBlock Text="{Binding IsActive, StringFormat='Активно: {0}'}" FontSize="11" Margin="0,0,0,5">
                                             <TextBlock.Style>
                                                 <Style TargetType="TextBlock">
-                                                    <Setter Property="Foreground" Value="Red"/>
+                                                    <Setter Property="Foreground" Value="Gray"/>
                                                     <Style.Triggers>
                                                         <DataTrigger Binding="{Binding IsActive}" Value="True">
                                                             <Setter Property="Foreground" Value="Orange"/>
