@@ -244,32 +244,7 @@ namespace GigaCity_Labor3_OOP
                 }
             }), System.Windows.Threading.DispatcherPriority.Loaded);
         }
-        private void OpenSecondAppButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                // Получаем путь к исполняемому файлу второго проекта.
-                // Замените "SecondProjectName.exe" на реальное имя вашего .exe файла.
-                string pathToExe = System.IO.Path.Combine(
-                    AppDomain.CurrentDomain.BaseDirectory, 
-                    "CitySimulation.exe" 
-                );
 
-                // Проверяем, существует ли файл
-                if (!System.IO.File.Exists(pathToExe))
-                {
-                    MessageBox.Show($"Не найден исполняемый файл по пути: {pathToExe}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
-                // Создаем и запускаем новый процесс
-                Process.Start(pathToExe);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Не удалось запустить приложение: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
         private void MapScrollViewer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.MiddleButton == MouseButtonState.Pressed)
@@ -1039,6 +1014,18 @@ namespace GigaCity_Labor3_OOP
                 MessageBox.Show($"Не удалось открыть финансовую систему: {ex.Message}", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void OpenEmergencyServiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Views.EmergencyServiceManagementWindow(ViewModel);
+            window.Show();
+        }
+
+        private void OpenForeignRelationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Views.ForeignRelationsManagementWindow(ViewModel);
+            window.Show();
         }
 
         private void OpenTrafficManagementButton_Click(object sender, RoutedEventArgs e)

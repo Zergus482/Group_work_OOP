@@ -150,16 +150,6 @@
                                 FontWeight="SemiBold"
                                 ToolTip="Открыть окно управления финансами города"/>
 
-                            <Button x:Name="OpenSecondAppButton" 
-                                    Content="Открыть вторую форму" 
-                                    Click="OpenSecondAppButton_Click"
-                                    Background="#7F3F3F" 
-                                    Foreground="White"
-                                    BorderBrush="#9F5F5F"
-                                    Padding="10,6"
-                                    FontSize="12"
-                                    FontWeight="SemiBold"/>
-
                             <Button x:Name="OpenTrafficManagementButton" 
                                 Content="Управление трафиком" 
                                 Click="OpenTrafficManagementButton_Click"
@@ -171,6 +161,30 @@
                                 FontWeight="SemiBold"
                                 Margin="0,5,0,0"
                                 ToolTip="Открыть окно управления дорожным движением"/>
+
+                            <Button x:Name="OpenEmergencyServiceButton" 
+                                Content="Пожарные службы (МЧС)" 
+                                Click="OpenEmergencyServiceButton_Click"
+                                Background="#8F2F2F" 
+                                Foreground="White"
+                                BorderBrush="#AF4F4F"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                Margin="0,5,0,0"
+                                ToolTip="Открыть окно управления пожарными службами"/>
+
+                            <Button x:Name="OpenForeignRelationsButton" 
+                                Content="Внешние связи" 
+                                Click="OpenForeignRelationsButton_Click"
+                                Background="#2F5F8F" 
+                                Foreground="White"
+                                BorderBrush="#4F7FAF"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                Margin="0,5,0,0"
+                                ToolTip="Открыть окно управления внешними связями"/>
                         </StackPanel>
                     </Border>
 
@@ -597,6 +611,79 @@
                                                    TextWrapping="Wrap"/>
                                     </StackPanel>
                                 </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Пожарные станции -->
+                    <ItemsControl ItemsSource="{Binding EmergencyService.FireStations}"
+                                  Panel.ZIndex="5"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding XCoordinate}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding YCoordinate}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Ellipse Width="20" Height="20" 
+                                         Fill="Red" 
+                                         Stroke="DarkRed" 
+                                         StrokeThickness="2"
+                                         ToolTip="{Binding Name}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Происшествия -->
+                    <ItemsControl ItemsSource="{Binding EmergencyService.Disasters}"
+                                  Panel.ZIndex="6"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding XCoordinate}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding YCoordinate}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Ellipse Width="15" Height="15" 
+                                         Fill="Orange" 
+                                         Stroke="Red" 
+                                         StrokeThickness="2"
+                                         Opacity="0.8"
+                                         ToolTip="{Binding Type, StringFormat='Происшествие: {0}'}">
+                                    <Ellipse.RenderTransform>
+                                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                    </Ellipse.RenderTransform>
+                                    <Ellipse.Style>
+                                        <Style TargetType="Ellipse">
+                                            <Style.Triggers>
+                                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                                    <BeginStoryboard>
+                                                        <Storyboard RepeatBehavior="Forever">
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                                             From="1" To="1.5" Duration="0:0:1" AutoReverse="True"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                                             From="1" To="1.5" Duration="0:0:1" AutoReverse="True"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Ellipse.Style>
+                                </Ellipse>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>

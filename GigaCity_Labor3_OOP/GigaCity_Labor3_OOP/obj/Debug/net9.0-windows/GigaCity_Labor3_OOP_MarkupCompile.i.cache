@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\obj\Debug\net9.0-windows\
 GigaCity_Labor3_OOP
 none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\user\Source\Repos\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\App.xaml
-5-737035223
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\GigaCity_Labor3_OOP\GigaCity_Labor3_OOP\App.xaml
+729399590
 
-41299490706
-203-956892474
-FinancialWindow.xaml;MainWindow.xaml;Views\CellInfoView.xaml;Views\ProductionGraphView.xaml;Views\TrafficManagementView.xaml;
+62415194037
+203-2081290782
+FinancialWindow.xaml;MainWindow.xaml;Views\CellInfoView.xaml;Views\EmergencyServiceManagementWindow.xaml;Views\ForeignRelationsManagementWindow.xaml;Views\ProductionGraphView.xaml;Views\TrafficManagementView.xaml;
 
-False
+True
 

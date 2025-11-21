@@ -1,36 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\",
+  "WorkspaceRootPath": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\economy\\economyfacilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\viewmodels\\economy\\economyfacilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\models\\economy\\coreresourcedefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\models\\economy\\coreresourcedefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\models\\economy\\economyenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\models\\economy\\economyenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\economy\\economysimulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\foreignrelationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\viewmodels\\foreignrelationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\economy\\economyfacilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\viewmodels\\economy\\economyfacilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\models\\economy\\coreresourcedefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\models\\economy\\coreresourcedefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\models\\economy\\economyenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\models\\economy\\economyenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\services\\parkandbikeplanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\viewmodels\\economy\\economysimulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\viewmodels\\economy\\economysimulationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\user\\source\\repos\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|c:\\users\\miron\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\group_work_oop\\gigacity_labor3_oop\\gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BB45CB63-0DFE-42F9-B150-B0F606CA57D0}|GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP.csproj|solutionrelative:gigacity_labor3_oop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -45,78 +49,63 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EconomyFacilityViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
-              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
-              "RelativeToolTip": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T19:37:29.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EconomyEnums.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
-              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
-              "RelativeToolTip": "GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwDgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T19:35:11.517Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CoreResourceDefinitions.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
-              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
-              "RelativeToolTip": "GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ForeignRelationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\ForeignRelationsViewModel.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\ViewModels\\ForeignRelationsViewModel.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\ForeignRelationsViewModel.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\ViewModels\\ForeignRelationsViewModel.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJEAAACYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T19:35:08.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:54:14.334Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "EconomyFacilityViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomyFacilityViewModel.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T19:37:29.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EconomyEnums.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\Models\\Economy\\EconomyEnums.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T19:35:11.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoreResourceDefinitions.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\Models\\Economy\\CoreResourceDefinitions.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T19:35:08.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EconomySimulationViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
               "RelativeToolTip": "GigaCity_Labor3_OOP\\ViewModels\\Economy\\EconomySimulationViewModel.cs",
               "ViewState": "AgIAAHwAAAAAAAAAAAAvwOgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -124,81 +113,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PropertyPathWorker.cs",
               "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
               "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\user\\AppData\\Local\\Temp\\.vsdbgsrc\\b8b74ed96cb310e7521b08fc2fd291b3e429a4b509c86c75e9f5ab857cffbff6\\PropertyPathWorker.cs",
               "ViewState": "AgIAAKkEAAAAAAAAAAAlwLcEAAATAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T09:34:06.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
               "RelativeToolTip": "GigaCity_Labor3_OOP\\MainWindow.xaml.cs",
-              "ViewState": "AgIAANMCAAAAAAAAAAAAwNMCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP0DAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T16:18:29.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ParkAndBikePlanner.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "RelativeToolTip": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T15:52:37.793Z",
+              "WhenOpened": "2025-11-17T16:18:29.253Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "ParkAndBikePlanner.cs",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "RelativeToolTip": "GigaCity_Labor3_OOP\\Services\\ParkAndBikePlanner.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T15:52:37.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
               "RelativeDocumentMoniker": "GigaCity_Labor3_OOP\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\miron\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\Group_work_OOP\\GigaCity_Labor3_OOP\\GigaCity_Labor3_OOP\\MainWindow.xaml",
               "RelativeToolTip": "GigaCity_Labor3_OOP\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-11-16T19:39:16.981Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 193,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 204,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1062,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

@@ -40,6 +40,12 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private CellInfoViewModel _cellInfoViewModel;
         public EconomySimulationViewModel EconomySimulation { get; }
 
+        // Пожарные службы
+        public EmergencyServiceViewModel EmergencyService { get; private set; }
+
+        // Внешние связи
+        public ForeignRelationsViewModel ForeignRelations { get; private set; }
+
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
 
         public TrafficManagementViewModel TrafficManagementViewModel
@@ -126,6 +132,12 @@ namespace GigaCity_Labor3_OOP.ViewModels
             SelectedCell = Map.Cells.FirstOrDefault();
 
             PopulateInitialTraffic();
+
+            // Инициализация пожарных служб
+            EmergencyService = new EmergencyServiceViewModel(Map);
+
+            // Инициализация внешних связей
+            ForeignRelations = new ForeignRelationsViewModel(PopulationManager);
         }
 
         private void InitializePlaneSystem()
