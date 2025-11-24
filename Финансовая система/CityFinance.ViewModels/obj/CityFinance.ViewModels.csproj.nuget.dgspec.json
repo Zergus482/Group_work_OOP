@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {}
+    "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {}
   },
   "projects": {
-    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {
+    "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
         "projectName": "CityFinance.ViewModels",
-        "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-        "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\CityFinance.ViewModels\\obj\\",
+        "projectPath": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\CityFinance.ViewModels\\CityFinance.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Дудос\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\CityFinance.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Шалом\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дудос\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
-                "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
+              "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+                "projectPath": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj"
               }
             }
           }
@@ -49,7 +49,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -70,24 +70,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
+    "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
         "projectName": "TheFinancialSystem",
-        "projectPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
-        "packagesPath": "C:\\Users\\Шалом\\.nuget\\packages\\",
-        "outputPath": "A:\\Проекты по ООП\\для репозитория\\Group_work\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
+        "projectPath": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\TheFinancialSystem.csproj",
+        "packagesPath": "C:\\Users\\Дудос\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Дудос\\Desktop\\Group_work_OOP-task-18-21\\Финансовая система\\TheFinancialSystem\\TheFinancialSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Шалом\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Дудос\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,7 +115,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -136,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

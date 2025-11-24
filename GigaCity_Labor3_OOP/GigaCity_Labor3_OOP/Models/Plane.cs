@@ -30,8 +30,8 @@ namespace GigaCity_Labor3_OOP.Models
             
             if (distance > 0)
             {
-                // Увеличиваем скорость для более быстрого полета
-                double speed = 1.2; // пикселей за обновление (обновление каждые 50мс)
+                // Самолеты летают намного быстрее машин (3-4 раза быстрее)
+                double speed = 4.0; // пикселей за обновление (обновление каждые 30мс) - увеличено с 1.2
                 VelocityX = (dx / distance) * speed;
                 VelocityY = (dy / distance) * speed;
             }

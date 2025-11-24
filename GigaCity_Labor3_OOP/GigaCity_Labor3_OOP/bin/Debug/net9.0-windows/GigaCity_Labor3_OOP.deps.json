@@ -22,7 +22,7 @@
         },
         "runtime": {
           "CityFinance.ViewModels.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -30,7 +30,7 @@
       "CitySimulation/1.0.0": {
         "runtime": {
           "CitySimulation.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -38,7 +38,7 @@
       "TheFinancialSystem/1.0.0": {
         "runtime": {
           "TheFinancialSystem.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

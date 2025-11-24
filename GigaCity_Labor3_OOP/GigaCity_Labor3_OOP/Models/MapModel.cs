@@ -130,18 +130,19 @@ namespace GigaCity_Labor3_OOP.Models
             PlacePorts(terrainMap);
 
             // 7. Создаем ячейки с ресурсами
+            // ИСПРАВЛЕНИЕ: Меняем местами X и Y при создании, чтобы соответствовало визуальному отображению
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
                     var cell = new CellViewModel
                     {
-                        X = x,
-                        Y = y,
+                        X = y,  // Меняем местами: X = y
+                        Y = x,  // Меняем местами: Y = x
                         TerrainType = terrainMap[x, y],
                         ResourceType = GetResourceType(terrainMap[x, y], random)
                     };
-                    cell.ToolTip = $"[{x},{y}] {GetTerrainName(cell.TerrainType)}\nРесурс: {GetResourceName(cell.ResourceType)}";
+                    cell.ToolTip = $"[{y},{x}] {GetTerrainName(cell.TerrainType)}\nРесурс: {GetResourceName(cell.ResourceType)}";
                     cells.Add(cell);
                 }
             }
@@ -238,10 +239,14 @@ namespace GigaCity_Labor3_OOP.Models
             double chance = random.NextDouble();
             return terrainType switch
             {
-                (byte)TerrainType.Meadows => chance < 0.2 ? (byte)ResourceType.Gas : chance < 0.4 ? (byte)ResourceType.Plants : (byte)ResourceType.None,
-                (byte)TerrainType.Forest => chance < 0.6 ? (byte)ResourceType.Trees : chance < 0.8 ? (byte)ResourceType.Plants : (byte)ResourceType.None,
-                (byte)TerrainType.Mountains => chance < 0.5 ? (byte)ResourceType.Metals : chance < 0.7 ? (byte)ResourceType.Oil : (byte)ResourceType.None,
-                (byte)TerrainType.Water => chance < 0.4 ? (byte)ResourceType.Metals : chance < 0.6 ? (byte)ResourceType.Oil : (byte)ResourceType.None,
+                // Поляны - газ и растения (не используются в упрощенной системе)
+                (byte)TerrainType.Meadows => chance < 0.25 ? (byte)ResourceType.Gas : chance < 0.5 ? (byte)ResourceType.Plants : (byte)ResourceType.None,
+                // Лес - деревья (основной ресурс для Wood) - увеличиваем вероятность
+                (byte)TerrainType.Forest => chance < 0.9 ? (byte)ResourceType.Trees : chance < 0.98 ? (byte)ResourceType.Plants : (byte)ResourceType.None,
+                // Горы - металлы (Iron, Copper) и уголь (Coal), иногда нефть (Oil) - увеличиваем вероятность металлов
+                (byte)TerrainType.Mountains => chance < 0.6 ? (byte)ResourceType.Metals : chance < 0.85 ? (byte)ResourceType.Metals : chance < 0.95 ? (byte)ResourceType.Oil : (byte)ResourceType.None,
+                // Водоемы - вода (всегда доступна по типу местности), иногда металлы и нефть
+                (byte)TerrainType.Water => chance < 0.2 ? (byte)ResourceType.Metals : chance < 0.4 ? (byte)ResourceType.Oil : (byte)ResourceType.None, // Вода определяется по типу местности
                 _ => 0
             };
         }
@@ -399,10 +404,41 @@ namespace GigaCity_Labor3_OOP.Models
 
         public CellViewModel GetCell(int x, int y)
         {
-            if (x < 0 || x >= Width || y < 0 || y >= Height) return null;
+            if (x < 0 || x >= Width || y < 0 || y >= Height)
+            {
+                System.Diagnostics.Debug.WriteLine($"GetCell: координаты вне границ [{x}, {y}], Width={Width}, Height={Height}");
+                return null;
+            }
+            
+            // Всегда ищем клетку по координатам, а не по индексу, чтобы избежать проблем с перепутанными координатами
+            var cell = Cells.FirstOrDefault(c => c.X == x && c.Y == y);
+            if (cell != null)
+            {
+                return cell;
+            }
+            
+            // Если не нашли по координатам, пробуем по индексу (на случай если координаты в клетках перепутаны)
             int index = x * Height + y;
-            if (index < 0 || index >= Cells.Count) return null;
-            return Cells[index];
+            if (index >= 0 && index < Cells.Count)
+            {
+                var cellByIndex = Cells[index];
+                System.Diagnostics.Debug.WriteLine($"GetCell: клетка [{x}, {y}] не найдена по координатам, но найдена по индексу {index} с координатами [{cellByIndex.X}, {cellByIndex.Y}]");
+                // Если координаты в найденной клетке перепутаны, пробуем поменять местами
+                if (cellByIndex.X == y && cellByIndex.Y == x)
+                {
+                    System.Diagnostics.Debug.WriteLine($"GetCell: координаты перепутаны! Ищем клетку с координатами [{y}, {x}]");
+                    var swapped = Cells.FirstOrDefault(c => c.X == y && c.Y == x);
+                    if (swapped != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"GetCell: найдена клетка с перепутанными координатами [{swapped.X}, {swapped.Y}]");
+                        return swapped;
+                    }
+                }
+                return cellByIndex;
+            }
+            
+            System.Diagnostics.Debug.WriteLine($"GetCell: клетка [{x}, {y}] не найдена ни по координатам, ни по индексу {index}");
+            return null;
         }
     }
 }

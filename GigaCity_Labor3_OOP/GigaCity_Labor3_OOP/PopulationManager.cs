@@ -58,5 +58,16 @@ namespace GigaCity_Labor3_OOP.Models
             University.UpdateGraduates();
             University.UpdateEmployees();
         }
+
+        /// <summary>
+        /// Добавляет нового человека в население.
+        /// </summary>
+        public void AddHuman(Human human)
+        {
+            if (human != null)
+            {
+                Population.Add(human);
+            }
+        }
     }
 }

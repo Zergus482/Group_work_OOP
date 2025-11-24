@@ -55,3 +55,50 @@ C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая сис�
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
 C:\Users\Нейтрон\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.sourcelink.json
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Desktop\Новая папка\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.sourcelink.json
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\user\Source\Repos\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.sourcelink.json
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\miron\OneDrive\Документы\GitHub\Group_work_OOP\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.deps.json
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\bin\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfoInputs.cache
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.AssemblyInfo.cs
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.csproj.CoreCompileInputs.cache
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.dll
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\refint\TheFinancialSystem.dll
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\TheFinancialSystem.pdb
+C:\Users\Дудос\Desktop\Group_work_OOP-task-18-21\Финансовая система\TheFinancialSystem\TheFinancialSystem\obj\Debug\net8.0\ref\TheFinancialSystem.dll

@@ -49,8 +49,16 @@ namespace GigaCity_Labor3_OOP.Services
             var roadCellsList = _roadCoordinates.ToList();
             if (roadCellsList.Count == 0) return null;
 
+            // Выбираем разные стартовые точки для разнообразия маршрутов
             var startCell = roadCellsList[_random.Next(roadCellsList.Count)];
-            var endCell = roadCellsList[_random.Next(roadCellsList.Count)];
+            // Выбираем конечную точку подальше от стартовой для более длинных маршрутов
+            var endCell = roadCellsList
+                .Where(c => Math.Abs(c.Item1 - startCell.Item1) + Math.Abs(c.Item2 - startCell.Item2) > 20)
+                .OrderBy(c => _random.Next())
+                .FirstOrDefault();
+            
+            if (endCell.Item1 == 0 && endCell.Item2 == 0)
+                endCell = roadCellsList[_random.Next(roadCellsList.Count)];
 
             var path = _pathFindingService.FindPath(startCell.Item1, startCell.Item2, endCell.Item1, endCell.Item2);
 
@@ -143,7 +151,30 @@ namespace GigaCity_Labor3_OOP.Services
         {
             var vehicle = CreateVehicle(type);
 
-            // Находим путь между заданными точками
+            // Убеждаемся что стартовая и конечная точки на дорогах
+            if (!_roadCoordinates.Contains((startX, startY)))
+            {
+                // Ищем ближайшую дорогу
+                var nearestRoad = FindNearestRoad(startX, startY);
+                if (nearestRoad.HasValue)
+                {
+                    startX = nearestRoad.Value.Item1;
+                    startY = nearestRoad.Value.Item2;
+                }
+            }
+
+            if (!_roadCoordinates.Contains((endX, endY)))
+            {
+                // Ищем ближайшую дорогу
+                var nearestRoad = FindNearestRoad(endX, endY);
+                if (nearestRoad.HasValue)
+                {
+                    endX = nearestRoad.Value.Item1;
+                    endY = nearestRoad.Value.Item2;
+                }
+            }
+
+            // Находим путь между заданными точками строго по дорогам
             var path = _pathFindingService.FindPath(startX, startY, endX, endY);
 
             if (path.Count > 0)
@@ -163,6 +194,49 @@ namespace GigaCity_Labor3_OOP.Services
             }
 
             return null; // Путь не найден
+        }
+
+        private (int, int)? FindNearestRoad(int x, int y)
+        {
+            var visited = new HashSet<(int, int)>();
+            var queue = new Queue<((int x, int y) point, int distance)>();
+            queue.Enqueue(((x, y), 0));
+            visited.Add((x, y));
+
+            var directions = new (int dx, int dy)[] { (-1, 0), (1, 0), (0, -1), (0, 1) };
+            const int maxSearchRadius = 20;
+
+            while (queue.Count > 0)
+            {
+                var item = queue.Dequeue();
+                if (item.distance > maxSearchRadius)
+                {
+                    break;
+                }
+
+                if (_roadCoordinates.Contains(item.point))
+                {
+                    return item.point;
+                }
+
+                foreach (var (dx, dy) in directions)
+                {
+                    int nx = item.point.x + dx;
+                    int ny = item.point.y + dy;
+
+                    if (nx < 0 || ny < 0 || nx >= 100 || ny >= 100)
+                    {
+                        continue;
+                    }
+
+                    if (visited.Add((nx, ny)))
+                    {
+                        queue.Enqueue(((nx, ny), item.distance + 1));
+                    }
+                }
+            }
+
+            return null;
         }
 
     }

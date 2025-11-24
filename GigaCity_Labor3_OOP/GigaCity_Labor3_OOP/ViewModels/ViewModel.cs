@@ -9,6 +9,7 @@ using TheFinancialSystem;
 using TheFinancialSystem.ViewModels;
 using GigaCity_Labor3_OOP.Services;
 using GigaCity_Labor3_OOP.ViewModels;
+using GigaCity_Labor3_OOP.ViewModels.Economy;
 
 namespace GigaCity_Labor3_OOP.ViewModels
 {
@@ -37,6 +38,19 @@ namespace GigaCity_Labor3_OOP.ViewModels
         private PathFindingService _pathFindingService;
         private TrafficManagementViewModel _trafficManagementViewModel;
         private CellInfoViewModel _cellInfoViewModel;
+        public EconomySimulationViewModel EconomySimulation { get; }
+
+        // Пожарные службы
+        public EmergencyServiceViewModel EmergencyService { get; private set; }
+
+        // Медицинские службы
+        public MedicalServiceViewModel MedicalService { get; private set; }
+
+        // Жилые дома
+        public ResidentialServiceViewModel ResidentialService { get; private set; }
+
+        // Внешние связи
+        public ForeignRelationsViewModel ForeignRelations { get; private set; }
 
         public string EmployeesStats => $"Работают: {PopulationManager.University.GetEmployeeCount()}/100";
 
@@ -101,6 +115,7 @@ namespace GigaCity_Labor3_OOP.ViewModels
             Map = new MapModel();
             PopulationManager = new PopulationManager();
             Population = PopulationManager.PopulationCount;
+            EconomySimulation = new EconomySimulationViewModel(Map.RoadCoordinates, Map.Width, Map.Height, 15, Map);
 
             // Инициализация финансовой системы
             InitializeFinancialSystem();
@@ -123,6 +138,20 @@ namespace GigaCity_Labor3_OOP.ViewModels
             SelectedCell = Map.Cells.FirstOrDefault();
 
             PopulateInitialTraffic();
+
+            // Инициализация пожарных служб
+            EmergencyService = new EmergencyServiceViewModel(Map);
+
+            // Инициализация медицинских служб
+            MedicalService = new MedicalServiceViewModel(Map);
+
+            // Инициализация жилых домов
+            ResidentialService = new ResidentialServiceViewModel(Map);
+            ResidentialService.SetMedicalService(MedicalService);
+            MedicalService.SetResidentialService(ResidentialService);
+
+            // Инициализация внешних связей
+            ForeignRelations = new ForeignRelationsViewModel(PopulationManager);
         }
 
         private void InitializePlaneSystem()
@@ -338,18 +367,21 @@ namespace GigaCity_Labor3_OOP.ViewModels
 
         private void PopulateInitialTraffic()
         {
-            // Маршруты-кольца вокруг центра города
-            var busRoute1 = new (int startX, int startY, int endX, int endY)[]
+            // Уменьшено количество машин для снижения нагрузки
+            // Разнообразные маршруты по разным дорогам
+            var routes = new (int startX, int startY, int endX, int endY, VehicleType type)[]
             {
-                (30, 50, 70, 50), // Горизонтальная дорога через центр
-                (70, 50, 70, 70), // Вертикальная дорога вниз
-                (70, 70, 30, 70), // Горизонтальная дорога обратно
-                (30, 70, 30, 50)  // Вертикальная дорога вверх
+                // Автобусы по основным маршрутам
+                (30, 50, 70, 50, VehicleType.Bus),
+                (50, 30, 50, 70, VehicleType.Bus),
+                // Грузовики для доставки
+                (20, 20, 80, 80, VehicleType.Truck),
+                (80, 20, 20, 80, VehicleType.Truck),
             };
 
-            foreach (var route in busRoute1)
+            foreach (var route in routes)
             {
-                _trafficManagementViewModel.AddVehicleOnRoute(VehicleType.Bus, route.startX, route.startY, route.endX, route.endY);
+                _trafficManagementViewModel.AddVehicleOnRoute(route.type, route.startX, route.startY, route.endX, route.endY);
             }
         }
 

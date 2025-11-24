@@ -2,18 +2,99 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:GigaCity_Labor3_OOP.Views"
+        xmlns:eco="clr-namespace:GigaCity_Labor3_OOP.ViewModels.Economy"
+        xmlns:converters="clr-namespace:GigaCity_Labor3_OOP.Converters"
         Title="Карта рельефа и ресурсов - 100x100" Height="800" Width="1100"
         WindowStartupLocation="CenterScreen"
         MinWidth="700" MinHeight="500">
 
+    <Window.Resources>
+        <converters:BooleanToPauseLabelConverter x:Key="BooleanToPauseLabelConverter"/>
+    </Window.Resources>
+
     <Grid Background="#2F2F2F">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HUD -->
+        <Border Grid.Row="0" Background="#1E1E1E" BorderBrush="#333" BorderThickness="0,0,0,1" Padding="12">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="0,0,12,0">
+                    <ItemsControl ItemsSource="{Binding EconomySimulation.ResourceStats}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="#2B2B2B" Padding="8" CornerRadius="6" Margin="0,0,6,0">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding DisplayName}" FontWeight="Bold" Foreground="White"/>
+                                        <TextBlock Text="{Binding TotalStockText}" FontSize="12" Foreground="LightGray"/>
+                                        <TextBlock Text="{Binding TrendText}" FontSize="11" Foreground="LightGreen"/>
+                                        <Polyline Points="{Binding HistoryPoints}"
+                                                  Stroke="{Binding Accent}"
+                                                  StrokeThickness="1.5"
+                                                  Fill="Transparent"
+                                                  Height="30"
+                                                  Margin="0,4,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                    <Button Content="Оптимизировать маршруты"
+                            Command="{Binding EconomySimulation.OptimizeRoutesCommand}"
+                            Padding="12,6"
+                            Background="#3A6C8E"
+                            Foreground="White"/>
+                    <Button Content="Отправить автопарк"
+                            Command="{Binding EconomySimulation.DispatchFleetCommand}"
+                            Padding="12,6"
+                            Background="#3F8E5A"
+                            Foreground="White"
+                            Margin="8,0,0,0"/>
+                    <Button x:Name="SaveGameButton" 
+                            Content="💾 Сохранить"
+                            Click="SaveGameButton_Click"
+                            Padding="12,6"
+                            Background="#5A8F5A"
+                            Foreground="White"
+                            Margin="8,0,0,0"
+                            ToolTip="Сохранить текущее состояние игры"/>
+                    <Button x:Name="LoadGameButton" 
+                            Content="📂 Загрузить"
+                            Click="LoadGameButton_Click"
+                            Padding="12,6"
+                            Background="#5A7F8F"
+                            Foreground="White"
+                            Margin="8,0,0,0"
+                            ToolTip="Загрузить сохраненное состояние игры"/>
+                    <ToggleButton Content="{Binding EconomySimulation.IsPaused, Converter={StaticResource BooleanToPauseLabelConverter}}"
+                                  IsChecked="{Binding EconomySimulation.IsPaused, Mode=OneWay}"
+                                  Command="{Binding EconomySimulation.TogglePauseCommand}"
+                                  Padding="12,6"
+                                  Background="#7F3F3F"
+                                  Foreground="White"
+                                  Margin="8,0,0,0"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
         <!-- Информационный столбец -->
-        <Border Grid.Column="0" Background="#404040" BorderBrush="#555555" BorderThickness="0,0,1,0">
+        <Border Grid.Row="1" Grid.Column="0" Background="#404040" BorderBrush="#555555" BorderThickness="0,0,1,0">
             <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="12">
                 <StackPanel>
                     <TextBlock Text="Информация о ячейке" 
@@ -22,22 +103,31 @@
                               Foreground="White" 
                               Margin="0,0,0,15" 
                               TextAlignment="Center"/>
-                    <Border Background="#3A5F7F" BorderBrush="#4A7F9F" BorderThickness="1" CornerRadius="4" Padding="10" Height="115" Margin="0,0,0,10">
+                    <Border Background="#3A5F7F" BorderBrush="#4A7F9F" BorderThickness="1" CornerRadius="4" Padding="10" Height="150" Margin="0,0,0,10">
                         <StackPanel>
                             <TextBlock Text="Управление" 
                                       FontWeight="Bold" 
                                       FontSize="14" 
                                       Foreground="White" 
                                       Margin="0,0,0,8"/>
-                            <TextBlock Text="• Правая кнопка - движение по карте" 
+                            <TextBlock Text="• Средняя кнопка мыши — перемещение карты" 
                                       FontSize="11" 
                                       Foreground="LightBlue"/>
-                            <TextBlock Text="• C или Home - центрировать карту" 
+                            <TextBlock Text="• ПКМ по клетке — меню строительства" 
                                       FontSize="11" 
-                                      Foreground="LightBlue"/>
-                            <TextBlock Text="• Наведите на ячейку для информации" 
+                                      Foreground="LightBlue"
+                                      Margin="0,3,0,0"/>
+                            <TextBlock Text="• Перетаскивание здания — перемещение" 
                                       FontSize="11" 
                                       Foreground="LightBlue" 
+                                      Margin="0,3,0,0"/>
+                            <TextBlock Text="• ПКМ по объекту — удаление" 
+                                      FontSize="11"
+                                      Foreground="LightBlue"
+                                      Margin="0,3,0,0"/>
+                            <TextBlock Text="• ЛКМ по логистическому центру — просмотр ресурсов" 
+                                      FontSize="11"
+                                      Foreground="LightBlue"
                                       Margin="0,3,0,0"/>
                         </StackPanel>
                     </Border>
@@ -60,16 +150,6 @@
                                 FontWeight="SemiBold"
                                 ToolTip="Открыть окно управления финансами города"/>
 
-                            <Button x:Name="OpenSecondAppButton" 
-                                    Content="Открыть вторую форму" 
-                                    Click="OpenSecondAppButton_Click"
-                                    Background="#7F3F3F" 
-                                    Foreground="White"
-                                    BorderBrush="#9F5F5F"
-                                    Padding="10,6"
-                                    FontSize="12"
-                                    FontWeight="SemiBold"/>
-
                             <Button x:Name="OpenTrafficManagementButton" 
                                 Content="Управление трафиком" 
                                 Click="OpenTrafficManagementButton_Click"
@@ -81,11 +161,178 @@
                                 FontWeight="SemiBold"
                                 Margin="0,5,0,0"
                                 ToolTip="Открыть окно управления дорожным движением"/>
+
+                            <Button x:Name="OpenEmergencyServiceButton" 
+                                Content="Пожарные службы (МЧС)" 
+                                Click="OpenEmergencyServiceButton_Click"
+                                Background="#8F2F2F" 
+                                Foreground="White"
+                                BorderBrush="#AF4F4F"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                Margin="0,5,0,0"
+                                ToolTip="Открыть окно управления пожарными службами"/>
+
+                            <Button x:Name="OpenForeignRelationsButton" 
+                                Content="Внешние связи" 
+                                Click="OpenForeignRelationsButton_Click"
+                                Background="#2F5F8F" 
+                                Foreground="White"
+                                BorderBrush="#4F7FAF"
+                                Padding="10,6"
+                                FontSize="12"
+                                FontWeight="SemiBold"
+                                Margin="0,5,0,0"
+                                ToolTip="Открыть окно управления внешними связями"/>
                         </StackPanel>
                     </Border>
 
                     <views:CellInfoView DataContext="{Binding CellInfoViewModel}" Margin="0,0,0,10"
                                         Loaded="CellInfoView_Loaded" />
+
+                    <!-- Панель управления медицинскими службами -->
+                    <Border Background="#2F5F4F" BorderBrush="#4F7F6F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Медицинские службы" 
+                                      FontWeight="Bold" 
+                                      FontSize="14" 
+                                      Foreground="White" 
+                                      Margin="0,0,0,10"/>
+
+                            <!-- Активные вызовы -->
+                            <TextBlock Text="Активные вызовы:" 
+                                      FontSize="12" 
+                                      FontWeight="SemiBold"
+                                      Foreground="LightCoral" 
+                                      Margin="0,0,0,5"/>
+                            <ScrollViewer MaxHeight="120" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                                <ItemsControl ItemsSource="{Binding MedicalService.EmergencyCalls}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#4F2F2F" BorderBrush="#6F4F4F" BorderThickness="1" CornerRadius="3" Padding="6" Margin="0,0,0,3">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding CallTime, StringFormat='Вызов: {0:HH:mm:ss}'}" 
+                                                              FontSize="10" 
+                                                              Foreground="White"/>
+                                                    <TextBlock FontSize="9" 
+                                                              Foreground="LightCoral">
+                                                        <Run Text="Координаты: "/>
+                                                        <Run Text="{Binding GridX, Mode=OneWay}"/>
+                                                        <Run Text=", "/>
+                                                        <Run Text="{Binding GridY, Mode=OneWay}"/>
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+                            <!-- Машины скорой помощи -->
+                            <TextBlock Text="Машины скорой помощи:" 
+                                      FontSize="12" 
+                                      FontWeight="SemiBold"
+                                      Foreground="LightBlue" 
+                                      Margin="0,0,0,5"/>
+                            <ScrollViewer MaxHeight="200" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                                <ItemsControl ItemsSource="{Binding MedicalService.AllAmbulances}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#2F4F5F" BorderBrush="#4F6F7F" BorderThickness="1" CornerRadius="3" Padding="6" Margin="0,0,0,3">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Name}" 
+                                                              FontSize="10" 
+                                                              FontWeight="SemiBold"
+                                                              Foreground="White"/>
+                                                    <TextBlock Text="{Binding StatusText}" 
+                                                              FontSize="9" 
+                                                              Foreground="LightBlue"
+                                                              Margin="0,2,0,0"/>
+                                                    <!-- Показываем координаты цели для машин на вызове или транспортировке -->
+                                                    <TextBlock FontSize="8" 
+                                                              Foreground="Yellow"
+                                                              Margin="0,2,0,0"
+                                                              Visibility="Collapsed">
+                                                        <TextBlock.Style>
+                                                            <Style TargetType="TextBlock">
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding CurrentState}" Value="OnMission">
+                                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                                        <Setter Property="Text">
+                                                                            <Setter.Value>
+                                                                                <MultiBinding StringFormat="Цель: ({0}, {1})">
+                                                                                    <Binding Path="TargetGridX" Mode="OneWay"/>
+                                                                                    <Binding Path="TargetGridY" Mode="OneWay"/>
+                                                                                </MultiBinding>
+                                                                            </Setter.Value>
+                                                                        </Setter>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CurrentState}" Value="Transporting">
+                                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                                        <Setter Property="Text">
+                                                                            <Setter.Value>
+                                                                                <MultiBinding StringFormat="Везет пациента в {0}">
+                                                                                    <Binding Path="AssignedMedicalPoint.Name"/>
+                                                                                </MultiBinding>
+                                                                            </Setter.Value>
+                                                                        </Setter>
+                                                                    </DataTrigger>
+                                                                    <DataTrigger Binding="{Binding CurrentState}" Value="Returning">
+                                                                        <Setter Property="Visibility" Value="Visible"/>
+                                                                        <Setter Property="Text">
+                                                                            <Setter.Value>
+                                                                                <MultiBinding StringFormat="Возвращается в {0}">
+                                                                                    <Binding Path="AssignedMedicalPoint.Name"/>
+                                                                                </MultiBinding>
+                                                                            </Setter.Value>
+                                                                        </Setter>
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </TextBlock.Style>
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+
+                            <!-- Больницы -->
+                            <TextBlock Text="Больницы:" 
+                                      FontSize="12" 
+                                      FontWeight="SemiBold"
+                                      Foreground="LightGreen" 
+                                      Margin="0,0,0,5"/>
+                            <ScrollViewer MaxHeight="150" VerticalScrollBarVisibility="Auto">
+                                <ItemsControl ItemsSource="{Binding MedicalService.MedicalPoints}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Background="#2F5F3F" BorderBrush="#4F7F5F" BorderThickness="1" CornerRadius="3" Padding="6" Margin="0,0,0,3">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Name}" 
+                                                              FontSize="10" 
+                                                              FontWeight="SemiBold"
+                                                              Foreground="White"/>
+                                                    <TextBlock Text="{Binding PatientCountText}" 
+                                                              FontSize="9" 
+                                                              Foreground="LightGreen"
+                                                              Margin="0,2,0,0"/>
+                                                    <TextBlock FontSize="8" 
+                                                              Foreground="LightGray"
+                                                              Margin="0,2,0,0">
+                                                        <Run Text="Машин: "/>
+                                                        <Run Text="{Binding AmbulanceCount, Mode=OneWay}"/>
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </Border>
 
                     <!-- Время -->
                     <Border Background="#4A2F5F" BorderBrush="#6A4F7F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
@@ -173,23 +420,190 @@
                             
                         </StackPanel>
                     </Border>
+                    
+                    <Border Background="#2F4F5F" BorderBrush="#456A7F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Экономический индикатор"
+                                       FontWeight="Bold"
+                                       FontSize="14"
+                                       Foreground="White"
+                                       Margin="0,0,0,5"/>
+                            <TextBlock Text="{Binding EconomySimulation.EconomicIndicatorText}"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="LightGreen"
+                                       Margin="0,0,0,6"/>
+                            <ProgressBar Value="{Binding EconomySimulation.EconomicIndicator, Mode=OneWay}"
+                                         Minimum="0"
+                                         Maximum="100"
+                                         Height="16"
+                                         Margin="0,0,0,8"/>
+                            <TextBlock Text="{Binding EconomySimulation.BalanceSummary}"
+                                       FontSize="11"
+                                       Foreground="White"
+                                       TextWrapping="Wrap"
+                                       Margin="0,0,0,6"/>
+                            <TextBlock Text="{Binding EconomySimulation.TotalProductionText}"
+                                       FontSize="12"
+                                       FontWeight="Bold"
+                                       Foreground="LightCyan"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
 
+                    <Border Background="#3A3F5F" BorderBrush="#505A8F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Объект экономики"
+                                       FontWeight="Bold"
+                                       FontSize="14"
+                                       Foreground="White"
+                                       Margin="0,0,0,5"/>
+                            <TextBlock Text="{Binding EconomySimulation.SelectedFacility.Name, TargetNullValue=Нажмите на объект карты}"
+                                       FontSize="13"
+                                       FontWeight="SemiBold"
+                                       Foreground="LightBlue"
+                                       TextWrapping="Wrap"
+                                       Margin="0,0,0,6"/>
+
+                            <ContentControl Content="{Binding EconomySimulation.SelectedFacility}">
+                                <ContentControl.ContentTemplate>
+                                    <DataTemplate DataType="{x:Type eco:EconomyFacilityViewModel}">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding NodeTypeTitle}"
+                                                       Foreground="White"
+                                                       FontSize="12"/>
+                                            <TextBlock Text="{Binding ResourceLabel}"
+                                                       Foreground="LightGray"
+                                                       FontSize="12"
+                                                       Margin="0,2,0,0"/>
+                                            <TextBlock Text="{Binding StatusText}"
+                                                       Foreground="LightGreen"
+                                                       FontWeight="Bold"
+                                                       Margin="0,4,0,0"/>
+                                            <TextBlock Text="{Binding StatusSummary}"
+                                                       Foreground="White"
+                                                       FontSize="11"/>
+                                            <TextBlock Text="Запасы:"
+                                                       Foreground="White"
+                                                       Margin="0,6,0,0"
+                                                       FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding StorageLabel}"
+                                                       Foreground="LightGray"/>
+                                            <TextBlock Text="{Binding Description}"
+                                                       Foreground="Gainsboro"
+                                                       FontSize="11"
+                                                       TextWrapping="Wrap"
+                                                       Margin="0,6,0,0"/>
+                                            <TextBlock Text="{Binding RiskNote}"
+                                                       Foreground="Orange"
+                                                       FontSize="11"
+                                                       TextWrapping="Wrap"
+                                                       Margin="0,4,0,0"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ContentControl.ContentTemplate>
+                            </ContentControl>
+                            <TextBlock Text="💡 ПКМ по объекту → Удалить"
+                                       FontSize="11"
+                                       Foreground="LightSteelBlue"
+                                       TextWrapping="Wrap"
+                                       Margin="0,10,0,0"/>
+                            <TextBlock Text="💡 ЛКМ по логистическому центру → Просмотр ресурсов"
+                                       FontSize="11"
+                                       Foreground="LightSteelBlue"
+                                       TextWrapping="Wrap"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Background="#2E3F4F" BorderBrush="#4A6A8F" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Добыча и производство"
+                                      FontWeight="Bold"
+                                      FontSize="14"
+                                      Foreground="White"
+                                      Margin="0,0,0,6"/>
+                            <TextBlock Text="Размещение объектов:"
+                                       FontWeight="SemiBold"
+                                       FontSize="12"
+                                       Foreground="LightBlue"
+                                       Margin="0,8,0,4"/>
+                            <TextBlock Text="⚠️ Добывающие объекты (Extraction) должны быть на ячейках с соответствующим ресурсом"
+                                       FontSize="11"
+                                       Foreground="Orange"
+                                       TextWrapping="Wrap"
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="• Лесозаготовка — только в лесах"
+                                       FontSize="11"
+                                       Foreground="LightGray"
+                                       Margin="0,4,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Text="• Рудники — в горах с металлами"
+                                       FontSize="11"
+                                       Foreground="LightGray"
+                                       Margin="0,2,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Text="• Угольный разрез — в горах"
+                                       FontSize="11"
+                                       Foreground="LightGray"
+                                       Margin="0,2,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Text="• Водозабор — только в водоемах"
+                                       FontSize="11"
+                                       Foreground="LightGray"
+                                       Margin="0,2,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Text="• Нефтяной промысел — в горах или водоемах"
+                                       FontSize="11"
+                                       Foreground="LightGray"
+                                       Margin="0,2,0,0"
+                                       TextWrapping="Wrap"/>
+                            <TextBlock Text="✅ Перерабатывающие объекты (Manufacturing) могут быть в любом месте"
+                                       FontSize="11"
+                                       Foreground="LightGreen"
+                                       Margin="0,6,0,0"
+                                       TextWrapping="Wrap"
+                                       FontWeight="SemiBold"/>
+                            <TextBlock Text="💡 Красный цвет = нет ресурса для добычи"
+                                       FontSize="11"
+                                       Foreground="Red"
+                                       Margin="0,6,0,0"
+                                       TextWrapping="Wrap"
+                                       FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Border>
+                    
                     <!-- Управление -->
                 </StackPanel>
             </ScrollViewer>
         </Border>
 
         <!-- Карта -->
-        <Border Grid.Column="1" Background="#1A1A1A" Padding="8">
+        <Border Grid.Row="1" Grid.Column="1" Background="#1A1A1A" Padding="8">
             <ScrollViewer x:Name="MapScrollViewer"
                          VerticalScrollBarVisibility="Auto" 
                          HorizontalScrollBarVisibility="Auto"
-                         PreviewMouseRightButtonDown="MapScrollViewer_PreviewMouseRightButtonDown"
-                         PreviewMouseRightButtonUp="MapScrollViewer_PreviewMouseRightButtonUp"
+                         PreviewMouseDown="MapScrollViewer_PreviewMouseDown"
+                         PreviewMouseUp="MapScrollViewer_PreviewMouseUp"
                          PreviewMouseMove="MapScrollViewer_PreviewMouseMove"
                          Background="#1A1A1A">
 
-                <Canvas x:Name="MapCanvas" Width="1500" Height="1500" Background="#1A1A1A">
+                <Canvas x:Name="MapCanvas" Width="1500" Height="1500" Background="#1A1A1A"
+                        MouseRightButtonDown="MapCanvas_MouseRightButtonDown"
+                        ContextMenuOpening="MapCanvas_ContextMenuOpening">
+                    <Canvas.ContextMenu>
+                        <ContextMenu ItemsSource="{Binding EconomySimulation.CombinedBuildMenu}"
+                                     Opened="ContextMenu_Opened">
+                            <ContextMenu.ItemContainerStyle>
+                                <Style TargetType="MenuItem">
+                                    <Setter Property="Header" Value="{Binding Header}"/>
+                                    <Setter Property="ToolTip" Value="{Binding Description}"/>
+                                    <Setter Property="Command" Value="{Binding Command}"/>
+                                    <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+                                </Style>
+                            </ContextMenu.ItemContainerStyle>
+                        </ContextMenu>
+                    </Canvas.ContextMenu>
                     <ItemsControl x:Name="MapItemsControl" Panel.ZIndex="0">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
@@ -197,8 +611,229 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
+
+                    <ItemsControl ItemsSource="{Binding EconomySimulation.RoadConnections}"
+                                  Panel.ZIndex="1"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type eco:RoadConnectionViewModel}">
+                                <Line X1="{Binding Start.X}"
+                                      Y1="{Binding Start.Y}"
+                                      X2="{Binding End.X}"
+                                      Y2="{Binding End.Y}"
+                                      Stroke="{Binding Stroke}"
+                                      StrokeThickness="{Binding Thickness}"
+                                      StrokeDashArray="4 4"
+                                      StrokeStartLineCap="Round"
+                                      StrokeEndLineCap="Round"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <ItemsControl ItemsSource="{Binding EconomySimulation.Flows}"
+                                  Panel.ZIndex="2"
+                                  IsHitTestVisible="False"
+                                  Width="{Binding Width, RelativeSource={RelativeSource AncestorType=Canvas}}"
+                                  Height="{Binding Height, RelativeSource={RelativeSource AncestorType=Canvas}}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type eco:ResourceFlowViewModel}">
+                                <Canvas>
+                                    <Path Data="{Binding ArrowGeometry}"
+                                          Stroke="{Binding FlowBrush}"
+                                          StrokeThickness="{Binding StrokeThickness}"
+                                          StrokeDashArray="6 4"
+                                          StrokeDashCap="Round"
+                                          StrokeStartLineCap="Round"
+                                          StrokeEndLineCap="Round"
+                                          Opacity="{Binding Opacity}"/>
+                                    <Polygon Points="{Binding ArrowHead}"
+                                             Fill="{Binding FlowBrush}"
+                                             Opacity="{Binding Opacity}"/>
+                                    <TextBlock Text="{Binding Label}"
+                                               FontSize="10"
+                                               Foreground="White"
+                                               Background="#66000000"
+                                               Padding="2"
+                                               Canvas.Left="{Binding LabelX}"
+                                               Canvas.Top="{Binding LabelY}"/>
+                                </Canvas>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <ItemsControl ItemsSource="{Binding EconomySimulation.TransportUnits}"
+                                  Panel.ZIndex="3"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding CanvasTop}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type eco:TransportUnitViewModel}">
+                                <Grid RenderTransformOrigin="0.5,0.5">
+                                    <Grid.RenderTransform>
+                                        <RotateTransform Angle="{Binding Rotation}"/>
+                                    </Grid.RenderTransform>
+                                    <Rectangle Width="{Binding CarrierLength}"
+                                               Height="{Binding CarrierHeight}"
+                                               Fill="{Binding BodyBrush}"
+                                               Stroke="Black"
+                                               StrokeThickness="0.5"
+                                               RadiusX="2"
+                                               RadiusY="2"
+                                               Opacity="0.9"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <ItemsControl ItemsSource="{Binding EconomySimulation.Facilities}"
+                                  Panel.ZIndex="4">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding CanvasLeft}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding CanvasTop}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type eco:EconomyFacilityViewModel}">
+                                <Button Command="{Binding DataContext.EconomySimulation.SelectFacilityCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                        CommandParameter="{Binding}"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        ToolTip="{Binding ToolTip}"
+                                        PreviewMouseLeftButtonDown="Facility_MouseLeftButtonDown"
+                                        PreviewMouseMove="Facility_MouseMove"
+                                        PreviewMouseLeftButtonUp="Facility_MouseLeftButtonUp"
+                                        PreviewMouseRightButtonDown="Facility_MouseRightButtonDown">
+                                    <Button.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="🗑️ Удалить объект"
+                                                      Command="{Binding DataContext.EconomySimulation.DeleteSelectedFacilityCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                      CommandParameter="{Binding}"/>
+                                        </ContextMenu>
+                                    </Button.ContextMenu>
+                                    <StackPanel HorizontalAlignment="Center">
+                                        <Grid Width="{Binding NodeSize}"
+                                              Height="{Binding NodeSize}">
+                                            <Ellipse Fill="{Binding FillBrush}"
+                                                     Stroke="{Binding StrokeBrush}"
+                                                     StrokeThickness="2"/>
+                                            <TextBlock Text="{Binding IconText}"
+                                                       Foreground="White"
+                                                       FontWeight="Bold"
+                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <TextBlock Text="{Binding Name}"
+                                                   Foreground="White"
+                                                   FontSize="10"
+                                                   TextAlignment="Center"
+                                                   Width="90"
+                                                   TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Пожарные станции -->
+                    <ItemsControl ItemsSource="{Binding EmergencyService.FireStations}"
+                                  Panel.ZIndex="5"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding XCoordinate}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding YCoordinate}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Ellipse Width="20" Height="20" 
+                                         Fill="Red" 
+                                         Stroke="DarkRed" 
+                                         StrokeThickness="2"
+                                         ToolTip="{Binding Name}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+
+                    <!-- Происшествия -->
+                    <ItemsControl ItemsSource="{Binding EmergencyService.Disasters}"
+                                  Panel.ZIndex="6"
+                                  IsHitTestVisible="False">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Canvas.Left" Value="{Binding XCoordinate}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding YCoordinate}"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Ellipse Width="15" Height="15" 
+                                         Fill="Orange" 
+                                         Stroke="Red" 
+                                         StrokeThickness="2"
+                                         Opacity="0.8"
+                                         ToolTip="{Binding Type, StringFormat='Происшествие: {0}'}">
+                                    <Ellipse.RenderTransform>
+                                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                    </Ellipse.RenderTransform>
+                                    <Ellipse.Style>
+                                        <Style TargetType="Ellipse">
+                                            <Style.Triggers>
+                                                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                                                    <BeginStoryboard>
+                                                        <Storyboard RepeatBehavior="Forever">
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
+                                                                             From="1" To="1.5" Duration="0:0:1" AutoReverse="True"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
+                                                                             From="1" To="1.5" Duration="0:0:1" AutoReverse="True"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Ellipse.Style>
+                                </Ellipse>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </Canvas>
             </ScrollViewer>
         </Border>
     </Grid>
+</Grid>
 </Window>
